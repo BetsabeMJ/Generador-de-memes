@@ -70,6 +70,24 @@ aside{
     background-color: rgb(183, 255, 231);
 }
 
+/* SECCIÓN DE FONDO Y COLOR */
+
+.color__controller--container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.background--color{
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+}
 footer{
     background-color: rgb(253, 173, 116);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+
 }
