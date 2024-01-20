@@ -14,7 +14,7 @@
 
 
 
-<!-- BARRA DE NAVEGACIÓN -->
+<!-- 1. BARRA DE NAVEGACIÓN -->
     <header>
         <h1 class="main__tittle">Generador de Memes</h1>
 
@@ -39,7 +39,7 @@
 
 
 
-<!-- ÁREA DEL EDITOR DE MEMES -->
+<!-- 2. ÁREA DEL EDITOR DE MEMES -->
     <main>
         <!-- Caja completa del editor de memes -->
         <section class="meme__area">
@@ -54,7 +54,9 @@
 
         <!-- botón de descarga: -->
         <div>
-            <button class="download--button">Descargar meme</button>
+            <button class="download--button">
+                <i class="fa-solid fa-download"> Descargar meme</i>
+            </button>
         </div>
 
     </main>
@@ -63,15 +65,18 @@
 
 
 
-   <!-- ASIDE CON FILTROS Y CARGO DE IMAGEN -->
+   <!-- 3. ASIDE CON FILTROS Y CARGO DE IMAGEN -->
     <aside>
+        <i class="fa-regular fa-circle-xmark"></i>
         <h2>IMAGEN</h2>
 
         <div>
             <h3>URL</h3>
             <div class="url__upload--container">
                 <input type="text" name="" id="">
-                <button>Cargar ing</button>
+                <button>
+                    <i class="fa-solid fa-cloud-arrow-up"> Cargar ing</i>
+                </button>
             </div>
             
         </div>
@@ -101,7 +106,7 @@
 
 
 
-        <!-- SECCIÓN DE FILTROS -->
+        <!-- 3.1 SECCIÓN DE FILTROS -->
         <div class="filters--container">
             <h3>FILTROS</h3>
             <!-- cajita de los inputs -->
@@ -175,9 +180,26 @@
 
 
 
-<!-- FOOTER -->
+<!-- 4. FOOTER -->
     <footer>
-        <p>Hecho con amor por Betsabe</p>
+        <!-- <ul class="footer__container--icons">
+            <li class="list">
+                <a class="footer__icon" tabindex="27" href="https://github.com/BetsabeMJ">   
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li class="list">
+                <a class="footer__icon" tabindex="28" href="https://www.linkedin.com/in/betsabe-martínez-jasso">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="list">
+                <a class="footer__icon" tabindex="29" href="mailto:betsabe.martinez.jasso@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+        </ul> -->
+        <p class="last_text">Hecho con <span><i class="fa-solid fa-heart"></i></span> por Betsabe</p>
         
     </footer>
 
