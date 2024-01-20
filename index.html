@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- LINK DE ÍCONOS DE ÍCONOS-->
+    <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
+    <!-- LINK DE FUENTES TIPOGRÁFICAS -->
+    <!-- LINK DE CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <title>Generador de memes</title>
 </head>
@@ -12,12 +16,22 @@
 
 <!-- BARRA DE NAVEGACIÓN -->
     <header>
-        <h1>Generador de Memes</h1>
-
-        <nav>
-            <div>Imagen</div>
-            <div>Texto</div>
-            <div>Modo oscuro</div>
+        <h1 class="main__tittle">Generador de Memes</h1>
+        
+        <!-- botones de la nav -->
+        <nav class="nav__buttons--container">
+            <button class="nav--button" id="image--button">
+                <i class="fa-regular fa-image"></i>
+                Imagen</button>
+            <button class="nav--button" id="text--button">
+                <i class="fa-solid fa-font"></i>
+                Texto</button>
+            <button class="nav--button" id="switch--button">
+                <i class="fa-solid fa-lightbulb"></i>
+                Modo oscuro</button>
+            <!-- <button class="nav--button" id="switch--button">
+                <i class="fa-regular fa-lightbulb"></i>
+                Modo claro</button> -->
         </nav>
 
     </header>
@@ -38,8 +52,10 @@
 
         </section>
 
-        <!-- Aquí va el botón de descarga, pero aún no lo pondré: -->
-        <a href=""></a>
+        <!-- botón de descarga: -->
+        <div>
+            <button class="download--button">Descarggar meme</button>
+        </div>
 
     </main>
 
@@ -47,17 +63,19 @@
 
 
 
-
+   <!-- ASIDE CON FILTROS Y CARGO DE IMAGEN -->
     <aside>
         <h2>IMAGEN</h2>
 
         <div>
             <h3>URL</h3>
+            <div class="url__upload--container">
+                <input type="text" name="" id=""> <button>Cargar ing</button>
+            </div>
+            
         </div>
 
-
-
-        <!-- SECCIÓN DE FONDO Y COLOR -->
+        <!-- Sección de color y estilos en ASIDE -->
         <div class="color__style__controller">
             <h3>FONDO</h3>
             <div class="color__controller--container">
@@ -83,9 +101,8 @@
 
 
 
-
-
-        <div>
+        <!-- SECCIÓN DE FILTROS -->
+        <div class="filters--container">
             <h3>FILTROS</h3>
             <!-- cajita de los inputs -->
             <div class="inputs__container">
@@ -147,11 +164,9 @@
         </div>
         
         
-        
-
-        <!-- aquí va el boton de restabler, pero no lo pondré aún: -->
+                <!-- boton de restabler: -->
         <div>
-            Restablecer
+            <button class="restore--button">Restablecer filtros</button>
         </div>
 
     </aside>
@@ -160,7 +175,7 @@
 
 
 
-
+<!-- FOOTER -->
     <footer>
         <p>Hecho con amor por Betsabe</p>
         
