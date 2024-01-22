@@ -183,10 +183,50 @@ h2{
 footer{
     background-color: rgb(253, 173, 116);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
+}
 
 
-    
+.list{
+    list-style: none;
+ }
+ a{
+     text-decoration: none;
+     color: black;
+ }
+
+
+.footer__container--icons{
+    display: flex;
+    gap: 60px;
+    /* padding-bottom: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.7rem;*/
+    padding: 10px; 
+}
+.fa-github, .fa-linkedin-in, .fa-envelope{
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 50px;
+
+}
+.footer__icon:hover a{
+    color: #cc9ea4;
+}
+/* .footer__icon:hover .fa-brands, .footer__icon:hover .fa-linkedin-in, .footer__icon:hover .fa-envelope{
+    color: #cc9ea4;
+
+} */
+.last_text{
+    display: block;
+    text-align: center;
+     padding-block: 5px; 
+    /*color: #cc9ea4;*/
+}
+.fa-heart{
+    font-size: 1.2rem;
 }
