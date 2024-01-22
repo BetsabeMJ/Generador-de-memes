@@ -6,6 +6,9 @@
     <!-- LINK DE ÍCONOS DE ÍCONOS-->
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
     <!-- LINK DE FUENTES TIPOGRÁFICAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- LINK DE CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <title>Generador de memes</title>
@@ -73,9 +76,9 @@
         <div>
             <h3>URL</h3>
             <div class="url__upload--container">
-                <input type="text" name="" id="">
-                <button>
-                    <i class="fa-solid fa-cloud-arrow-up"> Cargar ing</i>
+                <input type="text" name="" id="input__url--container">
+                <button class="upload__image--container">
+                    <i class="fa-solid fa-cloud-arrow-up"> Cargar imagen</i>
                 </button>
             </div>
             
@@ -85,13 +88,13 @@
         <div class="color__style__controller">
             <h3>FONDO</h3>
             <div class="color__controller--container">
-                <!-- <div>Color -->
+                <div class="input__background__color--container">
                     <input type="color" name="background--color" id="background--color" value="#ffffff">
-                    <span>#ffffff</span>
-                <!-- </div> -->
+                    <span class="color--span">#ffffff</span>
+                </div>
 
 
-                <!-- <div class="style__controller--container">Despleglable -->
+                <div class="style__controller--container">
                     <select name="select--style" id="select--style">
                         <option value="">Ninguno</option>
                         <option value="">Aclarar</option>
@@ -100,7 +103,7 @@
                         <option value="">Luminosidad</option>   
                         <option value="">Multiplicar</option>
                     </select>
-                <!-- </div> -->
+                </div>
             </div>
         </div>
 
