@@ -142,6 +142,7 @@ h3{
     align-items: center;
     gap: 30px;
     padding-block: 10px;
+    outline: 0;
 }
 #input__url--container{
     width: 60%;
@@ -149,8 +150,10 @@ h3{
     border: 1px solid black;
     border-radius: 10px;
     background-color: khaki;
+    padding-left: 10px;
+    outline: 0;
 }
-#input__url--container:hover {
+#input__url--container:focus {
     background-color: aqua;
 }
 .upload__image--container{
@@ -213,7 +216,8 @@ h3{
     color: inherit;
 }
 
-.style__controller--container{
+
+/* .style__controller--container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,15 +226,19 @@ h3{
     border: 1px solid black;
     border-radius: 10px;
     background-color: khaki;
-}
+} */
 #select--style{
-    width: 90%;
-    height: 4.4vh;
+    width: 30%;
+    height: 5vh;
     background: none;
-    border: 0;
-    columns: inherit;
+    border: 1px solid black;
+    border-radius: 10px;
+    border-radius: 10px;
     background-color: khaki;
 }
+#select--style:focus{
+    background-color: aquamarine;
+} 
 
 /* 3.1 SECCIÓN DE FILTROS */
 /* .filters--container{
