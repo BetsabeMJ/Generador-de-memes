@@ -112,7 +112,8 @@ main{
 
 
 /* 3. ASIDE CON FILTROS Y CARGO DE IMAGEN */
-aside{
+
+#image__aside{
     background-color: rgb(183, 255, 231);
     display: flex;
     flex-direction: column;
@@ -282,7 +283,66 @@ label{
     cursor: pointer;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1)}
 
-/* 4. FOOTER */
+
+
+    /* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-4. ASIDE DEL TEXTO*-*-*-*-*-*-*-*-*-*-*-*-*-*--*-*-*-*-*-* */
+/* 4. ASIDE DEL TEXTO */
+
+#text__aside{
+    background-color: rgb(254, 183, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    height: 100vh;
+}
+
+
+.fa-circle-xmark{
+    display: flex;
+    justify-content: end;
+    font-size: 1.25rem;
+    position: relative;
+}
+
+
+.url__upload--container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    padding-block: 10px;
+    outline: 0;
+}
+#input__url--container{
+    width: 60%;
+    height: 5vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: khaki;
+    padding-left: 10px;
+    outline: 0;
+}
+#input__url--container:focus {
+    background-color: aqua;
+}
+.upload__image--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 5vh;
+    background-color: khaki;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* 5. FOOTER */
 footer{
     background-color: rgb(253, 173, 116);
     display: flex;

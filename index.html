@@ -69,7 +69,7 @@
 
 
    <!-- 3. ASIDE CON FILTROS Y CARGO DE IMAGEN -->
-    <aside>
+    <aside id="image__aside">
         <i class="fa-regular fa-circle-xmark"></i>
         <h2>IMAGEN</h2>
 
@@ -218,7 +218,54 @@
 
 
 
-<!-- 4. FOOTER -->
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*4. ASIDE DEL TEXTO-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-* -->
+<!-- 4. ASIDE DEL TEXTO -->
+    <aside id="text__aside">
+        <i class="fa-regular fa-circle-xmark"></i>
+        <h2>TEXTO</h2>
+        <!-- input de texto inferior -->
+        <div class="top__text--container">
+            <h3>TEXTO SUPERIOR</h3>
+            <textarea name="top__text__area"
+            id="top__text--input"
+            placeholder="Ingresa texto superior aquí"
+            cols="40">
+            </textarea>
+        </div>
+
+        <div>
+            <input type="checkbox" 
+            name="remove__top__text" 
+            id="remove__top__text">
+            <label for="remove__top__text">Quitar texto superior</label>
+        </div>
+        
+        
+        
+        <!-- input de texto inferior -->
+        <div class="bottom__text--container">
+            <h3>TEXTO INFERIOR</h3>
+            <textarea name="bottom__text__area" 
+            id="bottom__text--input" 
+            placeholder="Ingresa texto inferior aquí"
+            cols="40">
+            </textarea>
+        </div>
+
+        <div>
+            <input type="checkbox"
+            name="remove__bottom__text"
+            id="remove__bottom__text">
+            <label for="remove__bottom__text">Quitar texto inferior</label>
+        </div>
+
+    </aside>
+
+
+
+
+
+<!-- 5. FOOTER -->
     <footer>
         <ul class="footer__container--icons">
             <li class="list">
