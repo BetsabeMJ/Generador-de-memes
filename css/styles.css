@@ -25,7 +25,7 @@ p, span, button, a, i, option, label{
     font-family: 'Montserrat', sans-serif;
 }
 
-
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*   1. BARRA DE NAVEGACIÓN   -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
 /* 1. BARRA DE NAVEGACIÓN */
 header{
     background-color: rgb(177, 177, 255);
@@ -67,6 +67,8 @@ nav{
 }
 
 
+
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    2.  ÁREA DE  EDITOR   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
 /* 2. ÁREA DEL EDITOR DE MEMES */
 main{
     background-color: rgb(248, 137, 137);
@@ -110,7 +112,7 @@ main{
 }
 
 
-
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    3 ASIDE CON FILTROS   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
 /* 3. ASIDE CON FILTROS Y CARGO DE IMAGEN */
 
 #image__aside{
@@ -341,7 +343,7 @@ label{
 
 
 
-
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-  5   FOOTER     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
 /* 5. FOOTER */
 footer{
     background-color: rgb(253, 173, 116);
