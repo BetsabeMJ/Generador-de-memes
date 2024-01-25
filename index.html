@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK DE ÍCONOS DE ÍCONOS-->
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
     <!-- LINK DE FUENTES TIPOGRÁFICAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -226,7 +229,8 @@
         <!-- input de texto inferior -->
         <div class="top__text--container">
             <h3>TEXTO SUPERIOR</h3>
-            <textarea name="top__text__area"
+            <textarea
+            name="top__textarea"
             id="top__text--input"
             placeholder="Ingresa texto superior aquí"
             cols="40">
@@ -245,8 +249,9 @@
         <!-- input de texto inferior -->
         <div class="bottom__text--container">
             <h3>TEXTO INFERIOR</h3>
-            <textarea name="bottom__text__area" 
-            id="bottom__text--input" 
+            <textarea
+            name="bottom__textarea"
+            id="bottom__text--input"
             placeholder="Ingresa texto inferior aquí"
             cols="40">
             </textarea>
@@ -280,17 +285,18 @@
 
         <!-- inputs de alineación de texto -->
         <div>
-            <input type="number" name="" id="">
+            <input type="number" name="font__size--input" id="font__size">
             <button class="left__text--btn">
-                <i class="fa-regular fa-align-left"></i>
+                <i class="fa-solid fa-align-left"></i>
             </button>
             <button class="center__text--btn">
-                <i class="fa-regular fa-align-center"></i>
+                <i class="fa-solid fa-align-center"></i>
             </button>            
             <button class="justify__text--btn">
-                <i class="fa-regular fa-align-justify"></i>
+                <i class="fa-solid fa-align-justify"></i>
             </button>
-            <button class="right__text--btn"><i class="fa-regular fa-align-justify"></i>
+            <button class="right__text--btn">
+                <i class="fa-solid fa-align-right"></i>
             </button>
         </div>
 
@@ -299,27 +305,43 @@
         <div>
             <div>
                 <h3>COLOR</h3>
-                <div>
+                <div class="text__color--container">
                     <input 
                     type="color" 
                     name="text__color--input" 
                     id="text__color"
-                    value="#00000">
-                    <span>#00000</span>
+                    value="#000000">
+                    <span>#000000</span>
                 </div>
 
             </div>
 
             <div>
                 <h3>FONDO</h3>
-                <div>
+
+
+
+
+
+                <div class="text__background__color--container">
+                    <input 
+                    type="color" 
+                    name="text__background__input" 
+                    id="text__background" 
+                    value="#ffffff">
+                    <span class="color--span">#ffffff</span>
+                </div>
+
+
+
+                <!-- <div class="text__background--container">
                     <input 
                     type="color" 
                     name="text__background__input" 
                     id="text__background"
                     value="#fffff">
                     <span>#fffff</span>
-                </div>
+                </div> -->
 
             </div>
             <div>
