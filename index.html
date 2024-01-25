@@ -285,7 +285,12 @@
 
         <!-- inputs de alineación de texto -->
         <div>
-            <input type="number" name="font__size--input" id="font__size">
+            <input 
+            ype="number" 
+            name="font__size--input"
+            placeholder="8"
+            id="font__size">
+            <!-- botones de alieado -->
             <button class="left__text--btn">
                 <i class="fa-solid fa-align-left"></i>
             </button>
@@ -319,10 +324,6 @@
             <div>
                 <h3>FONDO</h3>
 
-
-
-
-
                 <div class="text__background__color--container">
                     <input 
                     type="color" 
@@ -331,7 +332,6 @@
                     value="#ffffff">
                     <span class="color--span">#ffffff</span>
                 </div>
-
 
 
                 <!-- <div class="text__background--container">
@@ -355,7 +355,7 @@
         <!-- inputs para el contorno -->
         <div>
             <h3>CONTORNO</h3>
-            <div>
+            <div class="outline__buttons--container">
                 <button class="none__outline">Ninguno</button>
                 <button class="clear__outline">Claro</button>
                 <button class="dark__outline">Oscuro</button>
@@ -365,7 +365,7 @@
         <!-- input de espaciado -->
         <div>
             <h3>ESPACIADO</h3>
-            <div>
+            <div class="spaceline__container">
                 <input 
                 type="number" 
                 name="spaceline__input"
@@ -377,10 +377,10 @@
 
         </div>
 
-        <!-- input de espaciado -->
+        <!-- input de interlineado -->
         <div>
             <h3>INTERLINEADO</h3>
-            <div>
+            <div class="space__letter--container">
                 <select name="space__letter--input" id="space__letter">
                     <option value="0.5">0.5</option>
                     <option value="1">1</option>

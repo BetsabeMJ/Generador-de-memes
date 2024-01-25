@@ -304,6 +304,7 @@ label{
     justify-content: end;
     font-size: 1.25rem;
     position: relative;
+
 }
 
 #top__text--input{
@@ -375,7 +376,7 @@ label{
     padding: 3px 5px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: khaki;
+    background-color: rgb(142, 140, 240);
 }
 
 /* #background--color, .color--span{
@@ -396,7 +397,8 @@ label{
     padding: 3px 5px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: khaki;
+    background-color: rgb(142, 140, 240);
+    margin-bottom: 10px;
 }
 
 /* #background--color, .color--span{
@@ -410,7 +412,48 @@ label{
 }
 
 
+/* inputs para el contorno */
+.outline__buttons--container{ 
+    display: flex;
+    justify-content: space-evenly;
+    width: 95vw;
+}
 
+.none__outline, .clear__outline, .dark__outline{
+    width: 20%;
+    height: 5vh;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(142, 140, 240);
+}
+
+.none__outline:hover, .clear__outline:hover, .dark__outline:hover{
+    background-color: blue;
+}
+
+
+/* input de espaciado */
+#spaceline{
+    width: 30%;
+    height: 5vh;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgb(142, 140, 240);
+    outline: none;
+}
+
+/* input de interlineado */
+#space__letter{
+    width: 100%;
+    height: 5vh;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgb(142, 140, 240);
+    outline: none;
+}
 
 
 
