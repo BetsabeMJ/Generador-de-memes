@@ -145,6 +145,7 @@ h3{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: .90rem;
     gap: 30px;
     padding-block: 10px;
     outline: 0;
@@ -246,6 +247,7 @@ h3{
 #select--style{
     width: 30%;
     height: 5vh;
+    font-size: .90rem;
     background: none;
     border: 1px solid black;
     border-radius: 10px;
@@ -262,7 +264,7 @@ h3{
     padding-block: 15px;
 } */
 label{
-    font-size: 0.88rem;
+    font-size: .90rem;
 }
 .filters__inputs{
     display: flex;
@@ -281,21 +283,28 @@ label{
 } */
 
 /* esto no funciona */
-input[type='range']{
-    background-color: #cc53c4;
+.filter__style__input{
+    height: 1.8vh;
+    border-radius: 10px;
+    background-color:white;
+    appearance: none;
 }
-
-
-
+.filter__style__input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    border: 0;
+}
 
 /* boton de restabler: */
 .restore--button{
     padding: 7px 13px;
+    font-size: .90rem;
     /* background: none; */
     border: 1px solid black;
     background-color: #dff6fe;
     border-radius: 30px;
-    font-size: .87rem;
 }
 .restore--button:hover{
     background-color: #ffdefd;
@@ -329,6 +338,7 @@ input[type='range']{
 #top__text--input{
     width: 100%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border-color: transparent;
@@ -347,6 +357,7 @@ input[type='range']{
 #bottom__text--input{
     width: 100%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border-color: transparent;
@@ -363,6 +374,7 @@ input[type='range']{
 #fonts__style{
     width: 100%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border-color: transparent;
@@ -377,6 +389,7 @@ input[type='range']{
 #font__size{
     width: 50%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border-color: transparent;
@@ -394,6 +407,7 @@ input[type='range']{
 .left__text--btn, .center__text--btn, .justify__text--btn, .right__text--btn{
     width: 10%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border-color: transparent;
@@ -414,6 +428,7 @@ input[type='range']{
     justify-content: space-between;
     width: 30%;
     height: 5vh;
+    font-size: .90rem;
     padding: 3px 5px;
     border: 1px solid black;
     border-radius: 10px;
@@ -478,7 +493,7 @@ border: 1px solid #ff2f9f; */
 .none__outline, .clear__outline, .dark__outline{
     width: 20%;
     height: 5vh;
-    font-size: 0.85rem;
+    font-size: .90rem;
     border-radius: 5px;
     border: 1px solid black;
     background-color: #dff6fe;
@@ -494,6 +509,7 @@ border: 1px solid #ff2f9f; */
 #spaceline{
     width: 30%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border: 1px solid black;
@@ -509,6 +525,7 @@ border: 1px solid #ff2f9f; */
 #space__letter{
     width: 100%;
     height: 5vh;
+    font-size: .90rem;
     padding: 5px 10px;
     border-radius: 10px;
     border: 1px solid black;
@@ -590,6 +607,7 @@ footer{
 }
 .fa-github, .fa-linkedin-in, .fa-envelope{
     padding: 10px;
+    font-size: .90rem;
     border: 1px black solid;
     border-radius: 50px;
 
