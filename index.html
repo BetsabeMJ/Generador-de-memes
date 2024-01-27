@@ -7,7 +7,6 @@
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
     <!-- <link rel="icon" type="image/png" href="Images/favicon.png"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-
     <!-- LINK DE FUENTES TIPOGRÁFICAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +16,10 @@
     <title>Generador de memes</title>
 </head>
 <body>
-
-
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*   1. BARRA DE NAVEGACIÓN   -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 1. BARRA DE NAVEGACIÓN -->
     <header>
         <h1 class="main__tittle">Generador de Memes</h1>
-
         <!-- botones de la nav -->
         <nav class="nav__buttons--container">
             <button class="nav--button" id="image--button">
@@ -39,11 +35,7 @@
                 <i class="fa-regular fa-lightbulb"></i>
                 Modo claro</button> -->
         </nav>
-
     </header>
-
-
-
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    2.  ÁREA DE  EDITOR   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 2. ÁREA DEL EDITOR DE MEMES -->
     <main>
@@ -52,30 +44,21 @@
             <p class="meme__top--text">Ingresar texto superior</p>
             <!-- área en negro: -->
             <div class="meme__black--area">
-
             </div>
             <p class="meme__bottom--text">Ingresar texto inferior</p>
-
         </section>
-
         <!-- botón de descarga: -->
         <div>
             <button class="download--button">
                 <i class="fa-solid fa-download"> Descargar meme</i>
             </button>
         </div>
-
     </main>
-
-
-
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    3 ASIDE CON FILTROS   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
-
    <!-- 3. ASIDE CON FILTROS Y CARGO DE IMAGEN -->
     <aside id="image__aside">
         <i class="fa-regular fa-circle-xmark"></i>
         <h2>IMAGEN</h2>
-
         <div>
             <h3>URL</h3>
             <div class="url__upload--container">
@@ -89,7 +72,6 @@
                 </button>
             </div>
         </div>
-
         <!-- Sección de color y estilos en ASIDE -->
         <div class="color__style__controller">
             <h3>FONDO</h3>
@@ -102,8 +84,6 @@
                     value="#ffffff">
                     <span class="color--span">#ffffff</span>
                 </div>
-
-
                 <!-- <div class="style__controller--container"> -->
                     <select name="select--style" id="select--style">
                         <option value="unset">Ninguno</option>
@@ -116,9 +96,6 @@
                 <!-- </div> -->
             </div>
         </div>
-
-
-
         <!-- 3.1 SECCIÓN DE FILTROS -->
         <div class="filters--container">
             <h3>FILTROS</h3>
@@ -133,8 +110,6 @@
                     name="brillo" 
                     id="input__brightness">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__opacity">Opacidad</label>
                     <input
@@ -143,8 +118,6 @@
                     name="opacidad" 
                     id="input__opacity">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="">Contrate</label>
                     <input
@@ -153,8 +126,6 @@
                     name="contraste" 
                     id="input__contrast">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__blur">Desenfoque</label>
                     <input
@@ -163,8 +134,6 @@
                     name="desenfoque" 
                     id="input__blur">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__grays">Escala de grises</label>
                     <input
@@ -173,8 +142,6 @@
                     name="grises" 
                     id="input__grays">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__sepia">Sepia</label>
                     <input
@@ -183,8 +150,6 @@
                     name="sepia" 
                     id="input__sepia">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__hue">Hue</label>
                     <input
@@ -193,8 +158,6 @@
                     name="hue" 
                     id="input__hue">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__saturate">Saturado</label>
                     <input
@@ -203,8 +166,6 @@
                     name="saturador" 
                     id="input__saturate">
                 </div>
-
-
                 <div class="filters__inputs">
                     <label for="input__negative">Negativo</label>
                     <input
@@ -213,22 +174,13 @@
                     name="negativo" 
                     id="input__negative">
                 </div>
-                
             </div>
         </div>
-        
-        
                 <!-- boton de restabler: -->
         <div>
             <button class="restore--button">Restablecer filtros</button>
         </div>
-
     </aside>
-
-
-
-
-
 <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*4. ASIDE DEL TEXTO-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-* -->
 <!-- 4. ASIDE DEL TEXTO -->
     <aside id="text__aside">
@@ -244,16 +196,12 @@
             cols="40">
             </textarea>
         </div>
-
         <div>
             <input type="checkbox" 
             name="remove__top__text" 
             id="remove__top__text">
             <label for="remove__top__text">Quitar texto superior</label>
         </div>
-        
-        
-        
         <!-- input de texto inferior -->
         <div class="bottom__text--container">
             <h3>TEXTO INFERIOR</h3>
@@ -264,18 +212,14 @@
             cols="40">
             </textarea>
         </div>
-
         <div>
             <input type="checkbox"
             name="remove__bottom__text"
             id="remove__bottom__text">
             <label for="remove__bottom__text">Quitar texto inferior</label>
         </div>
-
-
         <!-- input de fuentes -->
         <div class="fonts__style--container">
-
         </div>
         <div class="fonts--container">
             <select name="font__family" id="fonts__style">
@@ -289,8 +233,6 @@
             <option value="Time News Roman">Time News Roman</option>
             </select>
         </div>
-
-
         <!-- inputs de alineación de texto -->
         <div>
             <input 
@@ -312,8 +254,6 @@
                 <i class="fa-solid fa-align-right"></i>
             </button>
         </div>
-
-
         <!-- inputs de color y fondo de textos -->
         <div class="asd">
             <div>
@@ -326,12 +266,9 @@
                     value="#000000">
                     <span class="color__text--span">#00000</span>
                 </div>
-
             </div>
-
             <div>
                 <h3>FONDO</h3>
-
                 <div class="text__background__color--container">
                     <input 
                     type="color" 
@@ -340,8 +277,6 @@
                     value="#ffffff">
                     <span class="color--span">#ffffff</span>
                 </div>
-
-
                 <!-- <div class="text__background--container">
                     <input 
                     type="color" 
@@ -350,7 +285,6 @@
                     value="#fffff">
                     <span>#fffff</span>
                 </div> -->
-
             </div>
         </div>
         <div>
@@ -359,10 +293,6 @@
             id="transparent__bacground ">
             <label for="remove__bottom__text">Fondo transparente</label>
         </div>
-
-
-
-
         <!-- inputs para el contorno -->
         <div>
             <h3>CONTORNO</h3>
@@ -372,7 +302,6 @@
                 <button class="dark__outline">Oscuro</button>
             </div>
         </div>
-
         <!-- input de espaciado -->
         <div>
             <h3>ESPACIADO</h3>
@@ -385,9 +314,7 @@
                 max="50"
                 placeholder="15">
             </div>
-
         </div>
-
         <!-- input de interlineado -->
         <div>
             <h3>INTERLINEADO</h3>
@@ -401,15 +328,7 @@
                 </select>
             </div>
         </div>
-
-
-
-
     </aside>
-
-
-
-
 <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-  5   FOOTER     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 5. FOOTER -->
     <footer>
@@ -431,9 +350,7 @@
             </li>
         </ul>
         <p class="last_text">Hecho con <span><i class="fa-solid fa-heart"></i></span> por Betsabe</p>
-        
     </footer>
-
     <script src="main.js"></script>
 </body>
 </html>
