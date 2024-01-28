@@ -175,6 +175,9 @@ h3{
         font-size: 1rem;
     }
 }
+#url_and_upload__image--container{
+    padding-bottom: 10px;
+}
 .url__upload--container{
     display: flex;
     justify-content: space-evenly;
@@ -239,14 +242,9 @@ h3{
     color: inherit;
 }
 /* Sección de color y estilos en ASIDE */
- /* .color__style__controller{
-    background-color: rgb(36, 221, 221);
-   display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-} */
+#color__style__controller{
+    padding-bottom: 10px;
+}
 .color__controller--container{
     display: flex;
     justify-content: space-evenly;
@@ -283,16 +281,6 @@ h3{
     border: 0;
     color: inherit;
 }
-/* .style__controller--container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 5vh;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: khaki;
-} */
 #select--style{
     width: 30%;
     height: 5vh;
@@ -315,16 +303,16 @@ h3{
     border: 1px solid #ff2f9f;
 }
 /* 3.1 SECCIÓN DE FILTROS */
-/* .filters--container{
-    padding-block: 15px;
-} */
+#filters--container{
+    padding-bottom: 15px;
+}
 label{
     font-size: .90rem;
 }
 .filters__inputs{
     display: flex;
     flex-direction: column;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
 }
 .inputs__container{
     margin: 0 auto;
@@ -395,6 +383,9 @@ label{
     font-size: 1.25rem;
     position: relative;
 }
+.top__text--container{
+    padding-bottom: 0px;
+}
 #top__text--input{
     width: 100%;
     height: 5vh;
@@ -415,8 +406,14 @@ label{
     background-color: #ffdefd;
     border: 1px solid #ff2f9f;
 }
+#remove__top__text--continer{
+    padding-bottom: 10px;
+}
 #remove__top__text{
     flex-grow: 0.5;
+}
+#bottom__text--container{
+    padding-bottom: 5px;
 }
 #bottom__text--input{
     width: 100%;
@@ -438,7 +435,13 @@ label{
     background-color: #ffdefd;
     border: 1px solid #ff2f9f;
 }
+#remove__bottom__text--container{
+    padding-bottom: 10px;
+}
 /* input de fuentes */
+.fonts--container{
+    padding-bottom: 10px;  
+}
 #fonts__style{
     width: 100%;
     height: 5vh;
@@ -480,6 +483,11 @@ label{
     border: 1px solid #ff2f9f;
 }
 /* inputs de alineación de texto */
+#align__text--container{
+    display: flex;
+    gap: 8px;
+    padding-bottom: 10px;
+}
 .left__text--btn, .center__text--btn, .justify__text--btn, .right__text--btn{
     width: 10%;
     height: 5vh;
@@ -502,6 +510,9 @@ label{
     border: 1px solid #ff2f9f;
 }
 /* inputs de color y fondo de textos */
+#color__text--container{
+    padding-bottom: 10px;
+}
 @media (min-width: 970px){
    .color_and__bkg--container{
     display: grid;
@@ -529,9 +540,6 @@ label{
 .text__color--container:hover{
     border: 1px solid #ff2f9f;
 }
-/* #background--color, .color--span{
-    align-self: center;
-} */
 #text__color{
     width: 25%;
     background: none;
@@ -545,6 +553,9 @@ label{
     .color__text--span{
         padding-top: 5px;
     }
+}
+#bkg__text--container{
+    padding-bottom: 5px;
 }
 .text__background__color--container{
     display: flex;
@@ -566,12 +577,6 @@ label{
 .text__background__color--container:hover{
     border: 1px solid #ff2f9f;
 }
-/* 
-background-color: #ffdefd;
-border: 1px solid #ff2f9f; */
-/* #background--color, .color--span{
-    align-self: center;
-} */
 #text__background{
     width: 25%;
     background: none;
@@ -581,7 +586,13 @@ border: 1px solid #ff2f9f; */
 .bkg__color--span{
     align-self: center;
 }
+#transparent__bacground--container{
+    padding-bottom: 10px;
+}
 /* inputs para el contorno */
+#outlines--container{
+    padding-bottom: 10px;
+}
 .outline__buttons--container{ 
     display: flex;
     justify-content: space-evenly;
@@ -611,6 +622,9 @@ border: 1px solid #ff2f9f; */
     border: 1px solid #ff2f9f;
 }
 /* input de espaciado */
+#spaceline--container{
+    padding-bottom: 10px;
+}
 #spaceline{
     width: 30%;
     height: 5vh;
@@ -632,6 +646,9 @@ border: 1px solid #ff2f9f; */
     border: 1px solid #ff2f9f;
 }
 /* input de interlineado */
+#pace_letter__container{
+    padding-bottom: 10px;
+}
 #space__letter{
     width: 100%;
     height: 5vh;
@@ -651,36 +668,6 @@ border: 1px solid #ff2f9f; */
 #space__letter:hover{
     border: 1px solid #ff2f9f;
 }
-/* .url__upload--container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-    padding-block: 10px;
-    outline: 0;
-}
-#input__url--container{
-    width: 60%;
-    height: 5vh;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: khaki;
-    padding-left: 10px;
-    outline: 0;
-}
-#input__url--container:focus {
-    background-color: aqua;
-}
-.upload__image--container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 5vh;
-    background-color: khaki;
-    border: 1px solid black;
-    border-radius: 10px;
-} */
 /* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-  5   FOOTER     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* */
 /* 5. FOOTER */
 footer{
@@ -712,10 +699,7 @@ footer{
 .footer__container--icons{
     display: flex;
     gap: 60px;
-    /* padding-bottom: 15px;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.7rem;*/
+
     padding: 10px; 
 }
 .fa-github, .fa-linkedin-in, .fa-envelope{
