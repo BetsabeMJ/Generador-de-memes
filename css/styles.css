@@ -503,7 +503,7 @@ label{
 }
 /* inputs de color y fondo de textos */
 @media (min-width: 970px){
-   .asd{
+   .color_and__bkg--container{
     display: grid;
     grid-auto-flow: column;
     gap: 10px;
@@ -577,6 +577,9 @@ border: 1px solid #ff2f9f; */
     background: none;
     border: 0;
     color: inherit;
+}
+.bkg__color--span{
+    align-self: center;
 }
 /* inputs para el contorno */
 .outline__buttons--container{ 
@@ -687,7 +690,7 @@ footer{
     justify-content: center;
     align-items: center;
     height: 15vh;
-    width: 100vw;
+    /* width: 100vw; */
     box-shadow: 0px 0px 10px -6px rgba(255,47,159,0.62);
     background-color: #fff1fe;
 }
@@ -724,7 +727,6 @@ footer{
 @media (min-width: 970px){
     .fa-github, .fa-linkedin-in, .fa-envelope{
         font-size: 1.1rem;
-
     }
  }
 /* .footer__icon:hover a{
