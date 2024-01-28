@@ -349,7 +349,7 @@ label{
     border-radius: 50%;
     border: 0;
 }
-/* boton de restabler: */
+/* botón de restabler: */
 .restore--button{
     padding: 7px 13px;
     font-size: .90rem;
@@ -687,6 +687,9 @@ footer{
     justify-content: center;
     align-items: center;
     height: 15vh;
+    width: 100vw;
+    box-shadow: 0px 0px 10px -6px rgba(255,47,159,0.62);
+    background-color: #fff1fe;
 }
 @media (min-width: 970px){
     footer{

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK DE ÍCONOS DE ÍCONOS-->
     <script src="https://kit.fontawesome.com/8f1dad4900.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./imágenes/troll-left.png" type="image/x-icon">
     <!-- <link rel="icon" type="image/png" href="Images/favicon.png"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <!-- LINK DE FUENTES TIPOGRÁFICAS -->
@@ -15,319 +16,323 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Generador de memes</title>
 </head>
-<body>
-    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*   1. BARRA DE NAVEGACIÓN   -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
+<body id="body">
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*   1. BARRA DE NAVEGACIÓN   -*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 1. BARRA DE NAVEGACIÓN -->
-    <header>
-        <h1 class="main__tittle">Generador de Memes</h1>
+    <header id="header">
+        <h1 class="main__tittle" id="main__tittle">Generador de Memes</h1>
         <!-- botones de la nav -->
-        <nav class="nav__buttons--container">
+        <nav class="nav__buttons--container" id="nav__buttons--container">
             <button class="nav--button" id="image--button">
-                <i class="fa-regular fa-image"></i>
+                <i class="fa-regular fa-image" aria-hidden="true"></i>
                 Imagen</button>
             <button class="nav--button" id="text--button">
-                <i class="fa-solid fa-font"></i>
+                <i class="fa-solid fa-font" aria-hidden="true"></i>
                 Texto</button>
             <button class="nav--button" id="switch--button">
-                <i class="fa-solid fa-lightbulb"></i>
+                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
                 Modo oscuro</button>
             <!-- <button class="nav--button" id="switch--button">
                 <i class="fa-regular fa-lightbulb"></i>
                 Modo claro</button> -->
         </nav>
     </header>
-    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    2.  ÁREA DE  EDITOR   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    2.  ÁREA DE  EDITOR   *-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 2. ÁREA DEL EDITOR DE MEMES -->
-    <main>
+    <main id="main">
         <!-- Caja completa del editor de memes -->
-        <section class="meme__area">
-            <p class="meme__top--text">Ingresar texto superior</p>
+        <section class="meme__area" id="meme__area">
+            <p class="meme__top--text" id="meme__top--text">Ingresar texto superior</p>
             <!-- área en negro: -->
-            <div class="meme__black--area">
+            <div class="meme__black--area" id="meme__black--area">
             </div>
-            <p class="meme__bottom--text">Ingresar texto inferior</p>
+            <p class="meme__bottom--text" id="meme__bottom--text">Ingresar texto inferior</p>
         </section>
         <!-- botón de descarga: -->
         <div>
-            <button class="download--button">
-                <i class="fa-solid fa-download"> Descargar meme</i>
+            <button class="download--button" id="download--button">
+                <i class="fa-solid fa-download" aria-hidden="true"> Descargar meme</i>
             </button>
         </div>
     </main>
-    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    3 ASIDE CON FILTROS   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    3 ASIDE CON FILTROS   *-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
    <!-- 3. ASIDE CON FILTROS Y CARGO DE IMAGEN -->
     <aside id="image__aside">
-        <i class="fa-regular fa-circle-xmark"></i>
-        <h2>IMAGEN</h2>
-        <div>
-            <h3>URL</h3>
-            <div class="url__upload--container">
-                <input
-                type="text" 
-                placeholder="http://ejemplo.com"
-                name="url__input" 
-                id="input__url--container">
-                <button class="upload__image--container">
-                    <i class="fa-solid fa-cloud-arrow-up"> Cargar imagen</i>
-                </button>
-            </div>
-        </div>
-        <!-- Sección de color y estilos en ASIDE -->
-        <div class="color__style__controller">
-            <h3>FONDO</h3>
-            <div class="color__controller--container">
-                <div class="input__background__color--container">
-                    <input 
-                    type="color" 
-                    name="background--color" 
-                    id="background--color" 
-                    value="#ffffff">
-                    <span class="color--span">#ffffff</span>
-                </div>
-                <!-- <div class="style__controller--container"> -->
-                    <select name="select--style" id="select--style">
-                        <option value="unset">Ninguno</option>
-                        <option value="lighten">Aclarar</option>
-                        <option value="darken">Oscurecer</option>
-                        <option value="difference">Diferencia</option>
-                        <option value="luminosity">Luminosidad</option>   
-                        <option value="multiply">Multiplicar</option>
-                    </select>
-                <!-- </div> -->
-            </div>
-        </div>
-        <!-- 3.1 SECCIÓN DE FILTROS -->
-        <div class="filters--container">
-            <h3>FILTROS</h3>
-            <!-- cajita de los inputs -->
-            <div class="inputs__container">
-                <!-- cajitas de c/u de los inputs -->
-                <div class="filters__inputs">
-                    <label for="input__brightness">Brillo</label>
+        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+        <h2 id="image__tittle">IMAGEN</h2>
+        <form action="">
+            <div>
+                <h3>URL</h3>
+                <div class="url__upload--container">
                     <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="brillo" 
-                    id="input__brightness">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__opacity">Opacidad</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="opacidad" 
-                    id="input__opacity">
-                </div>
-                <div class="filters__inputs">
-                    <label for="">Contrate</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="contraste" 
-                    id="input__contrast">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__blur">Desenfoque</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="desenfoque" 
-                    id="input__blur">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__grays">Escala de grises</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="grises" 
-                    id="input__grays">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__sepia">Sepia</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="sepia" 
-                    id="input__sepia">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__hue">Hue</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="hue" 
-                    id="input__hue">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__saturate">Saturado</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="saturador" 
-                    id="input__saturate">
-                </div>
-                <div class="filters__inputs">
-                    <label for="input__negative">Negativo</label>
-                    <input
-                    class="filter__style__input" 
-                    type="range" 
-                    name="negativo" 
-                    id="input__negative">
+                    type="text" 
+                    placeholder="http://ejemplo.com"
+                    name="url__input" 
+                    id="input__url--container">
+                    <button class="upload__image--container">
+                        <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"> Cargar imagen</i>
+                    </button>
                 </div>
             </div>
-        </div>
-                <!-- boton de restabler: -->
-        <div>
-            <button class="restore--button">Restablecer filtros</button>
-        </div>
+            <!-- Sección de color y estilos en ASIDE -->
+            <div class="color__style__controller">
+                <h3 id="background__tittle">FONDO</h3>
+                <div class="color__controller--container">
+                    <div class="input__background__color--container">
+                        <input 
+                        type="color" 
+                        name="background--color" 
+                        id="background--color" 
+                        value="#ffffff">
+                        <span class="color--span">#ffffff</span>
+                    </div>
+                    <!-- <div class="style__controller--container"> -->
+                        <select name="select--style" id="select--style">
+                            <option value="unset">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>   
+                            <option value="multiply">Multiplicar</option>
+                        </select>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- 3.1 SECCIÓN DE FILTROS -->
+            <div class="filters--container">
+                <h3>FILTROS</h3>
+                <!-- cajita de los inputs -->
+                <div class="inputs__container">
+                    <!-- cajitas de c/u de los inputs -->
+                    <div class="filters__inputs">
+                        <label for="input__brightness">Brillo</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="brillo" 
+                        id="input__brightness">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__opacity">Opacidad</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="opacidad" 
+                        id="input__opacity">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="">Contrate</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="contraste" 
+                        id="input__contrast">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__blur">Desenfoque</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="desenfoque" 
+                        id="input__blur">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__grays">Escala de grises</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="grises" 
+                        id="input__grays">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__sepia">Sepia</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="sepia" 
+                        id="input__sepia">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__hue">Hue</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="hue" 
+                        id="input__hue">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__saturate">Saturado</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="saturador" 
+                        id="input__saturate">
+                    </div>
+                    <div class="filters__inputs">
+                        <label for="input__negative">Negativo</label>
+                        <input
+                        class="filter__style__input" 
+                        type="range" 
+                        name="negativo" 
+                        id="input__negative">
+                    </div>
+                </div>
+            </div>
+                    <!-- boton de restabler: -->
+            <div>
+                <button class="restore--button">Restablecer filtros</button>
+            </div>
+        </form>
     </aside>
 <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*4. ASIDE DEL TEXTO-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-* -->
 <!-- 4. ASIDE DEL TEXTO -->
     <aside id="text__aside">
-        <i class="fa-regular fa-circle-xmark"></i>
+        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
         <h2>TEXTO</h2>
-        <!-- input de texto inferior -->
-        <div class="top__text--container">
-            <h3>TEXTO SUPERIOR</h3>
-            <textarea
-            name="top__textarea"
-            id="top__text--input"
-            placeholder="Ingresa texto superior aquí"
-            cols="40">
-            </textarea>
-        </div>
-        <div>
-            <input type="checkbox" 
-            name="remove__top__text" 
-            id="remove__top__text">
-            <label for="remove__top__text">Quitar texto superior</label>
-        </div>
-        <!-- input de texto inferior -->
-        <div class="bottom__text--container">
-            <h3>TEXTO INFERIOR</h3>
-            <textarea
-            name="bottom__textarea"
-            id="bottom__text--input"
-            placeholder="Ingresa texto inferior aquí"
-            cols="40">
-            </textarea>
-        </div>
-        <div>
-            <input type="checkbox"
-            name="remove__bottom__text"
-            id="remove__bottom__text">
-            <label for="remove__bottom__text">Quitar texto inferior</label>
-        </div>
-        <!-- input de fuentes -->
-        <div class="fonts__style--container">
-        </div>
-        <div class="fonts--container">
-            <select name="font__family" id="fonts__style">
-            <option value="Arial">Arial</option>
-            <option value="Arial Black">Arial Black</option>
-            <option value="American Typewriter">American Typewriter</option>
-            <option value="Andale Mono">Andale Mono</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Impact">Impact</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Time News Roman">Time News Roman</option>
-            </select>
-        </div>
-        <!-- inputs de alineación de texto -->
-        <div>
-            <input 
-            ype="number" 
-            name="font__size--input"
-            placeholder="8"
-            id="font__size">
-            <!-- botones de alieado -->
-            <button class="left__text--btn">
-                <i class="fa-solid fa-align-left"></i>
-            </button>
-            <button class="center__text--btn">
-                <i class="fa-solid fa-align-center"></i>
-            </button>            
-            <button class="justify__text--btn">
-                <i class="fa-solid fa-align-justify"></i>
-            </button>
-            <button class="right__text--btn">
-                <i class="fa-solid fa-align-right"></i>
-            </button>
-        </div>
-        <!-- inputs de color y fondo de textos -->
-        <div class="asd">
-            <div>
-                <h3>COLOR</h3>
-                <div class="text__color--container">
-                    <input 
-                    type="color" 
-                    name="text__color--input" 
-                    id="text__color"
-                    value="#000000">
-                    <span class="color__text--span">#00000</span>
-                </div>
+        <form action="">
+            <!-- input de texto inferior -->
+            <div class="top__text--container">
+                <h3>TEXTO SUPERIOR</h3>
+                <textarea
+                name="top__textarea"
+                id="top__text--input"
+                placeholder="Ingresa texto superior aquí"
+                cols="40">
+                </textarea>
             </div>
             <div>
-                <h3>FONDO</h3>
-                <div class="text__background__color--container">
-                    <input 
-                    type="color" 
-                    name="text__background__input" 
-                    id="text__background" 
-                    value="#ffffff">
-                    <span class="color--span">#ffffff</span>
-                </div>
-                <!-- <div class="text__background--container">
-                    <input 
-                    type="color" 
-                    name="text__background__input" 
-                    id="text__background"
-                    value="#fffff">
-                    <span>#fffff</span>
-                </div> -->
+                <input type="checkbox" 
+                name="remove__top__text" 
+                id="remove__top__text">
+                <label for="remove__top__text">Quitar texto superior</label>
             </div>
-        </div>
-        <div>
-            <input type="checkbox"
-            name="transparent__bacground__input"
-            id="transparent__bacground ">
-            <label for="remove__bottom__text">Fondo transparente</label>
-        </div>
-        <!-- inputs para el contorno -->
-        <div>
-            <h3>CONTORNO</h3>
-            <div class="outline__buttons--container">
-                <button class="none__outline">Ninguno</button>
-                <button class="clear__outline">Claro</button>
-                <button class="dark__outline">Oscuro</button>
+            <!-- input de texto inferior -->
+            <div class="bottom__text--container">
+                <h3>TEXTO INFERIOR</h3>
+                <textarea
+                name="bottom__textarea"
+                id="bottom__text--input"
+                placeholder="Ingresa texto inferior aquí"
+                cols="40">
+                </textarea>
             </div>
-        </div>
-        <!-- input de espaciado -->
-        <div>
-            <h3>ESPACIADO</h3>
-            <div class="spaceline__container">
-                <input 
-                type="number" 
-                name="spaceline__input"
-                id="spaceline"
-                min="10"
-                max="50"
-                placeholder="15">
+            <div>
+                <input type="checkbox"
+                name="remove__bottom__text"
+                id="remove__bottom__text">
+                <label for="remove__bottom__text">Quitar texto inferior</label>
             </div>
-        </div>
-        <!-- input de interlineado -->
-        <div>
-            <h3>INTERLINEADO</h3>
-            <div class="space__letter--container">
-                <select name="space__letter--input" id="space__letter">
-                    <option value="0.5">0.5</option>
-                    <option value="1">1</option>
-                    <option value="1.5">1.5</option>
-                    <option value="2">2</option>
-                    <option value="2.5">2.5</option>
+            <!-- input de fuentes -->
+            <div class="fonts__style--container">
+            </div>
+            <div class="fonts--container">
+                <select name="font__family" id="fonts__style">
+                <option value="Arial">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="American Typewriter">American Typewriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Time News Roman">Time News Roman</option>
                 </select>
             </div>
-        </div>
+            <!-- inputs de alineación de texto -->
+            <div>
+                <input 
+                ype="number" 
+                name="font__size--input"
+                placeholder="8"
+                id="font__size">
+                <!-- botones de alieado -->
+                <button class="left__text--btn">
+                    <i class="fa-solid fa-align-left" aria-hidden="true"></i>
+                </button>
+                <button class="center__text--btn">
+                    <i class="fa-solid fa-align-center" aria-hidden="true"></i>
+                </button>            
+                <button class="justify__text--btn">
+                    <i class="fa-solid fa-align-justify" aria-hidden="true"></i>
+                </button>
+                <button class="right__text--btn">
+                    <i class="fa-solid fa-align-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- inputs de color y fondo de textos -->
+            <div class="asd">
+                <div>
+                    <h3>COLOR</h3>
+                    <div class="text__color--container">
+                        <input 
+                        type="color" 
+                        name="text__color--input" 
+                        id="text__color"
+                        value="#000000">
+                        <span class="color__text--span">#00000</span>
+                    </div>
+                </div>
+                <div>
+                    <h3>FONDO</h3>
+                    <div class="text__background__color--container">
+                        <input 
+                        type="color" 
+                        name="text__background__input" 
+                        id="text__background" 
+                        value="#ffffff">
+                        <span class="color--span">#ffffff</span>
+                    </div>
+                    <!-- <div class="text__background--container">
+                        <input 
+                        type="color" 
+                        name="text__background__input" 
+                        id="text__background"
+                        value="#fffff">
+                        <span>#fffff</span>
+                    </div> -->
+                </div>
+            </div>
+            <div>
+                <input type="checkbox"
+                name="transparent__bacground__input"
+                id="transparent__bacground ">
+                <label for="remove__bottom__text">Fondo transparente</label>
+            </div>
+            <!-- inputs para el contorno -->
+            <div>
+                <h3>CONTORNO</h3>
+                <div class="outline__buttons--container">
+                    <button class="none__outline">Ninguno</button>
+                    <button class="clear__outline">Claro</button>
+                    <button class="dark__outline">Oscuro</button>
+                </div>
+            </div>
+            <!-- input de espaciado -->
+            <div>
+                <h3>ESPACIADO</h3>
+                <div class="spaceline__container">
+                    <input 
+                    type="number" 
+                    name="spaceline__input"
+                    id="spaceline"
+                    min="10"
+                    max="50"
+                    placeholder="15">
+                </div>
+            </div>
+            <!-- input de interlineado -->
+            <div>
+                <h3>INTERLINEADO</h3>
+                <div class="space__letter--container">
+                    <select name="space__letter--input" id="space__letter">
+                        <option value="0.5">0.5</option>
+                        <option value="1">1</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
+                </div>
+            </div>
+        </form>
     </aside>
 <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-  5   FOOTER     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 5. FOOTER -->
@@ -335,17 +340,17 @@
         <ul class="footer__container--icons">
             <li class="list">
                 <a class="footer__icon" tabindex="27" href="https://github.com/BetsabeMJ">   
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
                 </a>
             </li>
             <li class="list">
                 <a class="footer__icon" tabindex="28" href="https://www.linkedin.com/in/betsabe-martínez-jasso">
-                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                 </a>
             </li>
             <li class="list">
                 <a class="footer__icon" tabindex="29" href="mailto:betsabe.martinez.jasso@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 </a>
             </li>
         </ul>
