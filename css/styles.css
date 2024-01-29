@@ -167,6 +167,11 @@ h2{
     font-size: 1.25rem;
     position: relative;
 }
+@media (min-width: 970px){
+    .fa-circle-xmark{
+        display: none;
+    }
+}
 h3{
     font-size: 0.89rem;
 }
@@ -382,6 +387,11 @@ label{
     justify-content: end;
     font-size: 1.25rem;
     position: relative;
+}
+@media (min-width: 970px){
+    .fa-circle-xmark{
+        display: none;
+    }
 }
 .top__text--container{
     padding-bottom: 0px;
