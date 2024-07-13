@@ -1,4 +1,4 @@
-// console.log("Hola!");
+console.log("Hola!");
 const darkMode = document.querySelector(".dark__mode");
 console.log(darkMode);
 
