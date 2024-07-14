@@ -239,7 +239,7 @@ h3 {
     flex-direction: column;
   }
 }
-#input__url--container {
+.input__url--container {
   width: 60%;
   height: 5vh;
   border: 1px solid black;
@@ -253,6 +253,11 @@ h3 {
     width: 100%;
     height: 40px;
   }
+}
+.input__url{
+    width: 99%;
+    height: 4vh;
+    border: none;
 }
 #input__url--container:focus {
   background-color: #dff6fe;
@@ -436,9 +441,9 @@ label {
     display: none;
   }
 }
-.top__text--container {
-  padding-bottom: 0px;
-}
+/* .top__text--input {
+  padding-bottom: 5px;
+} */
 #top__text--input {
   width: 100%;
   height: 5vh;
@@ -449,6 +454,7 @@ label {
   background-color: #dff6fe;
   border: 1px solid black;
   outline: none;
+  
 }
 @media (min-width: 970px) {
   #top__text--input {
@@ -460,7 +466,7 @@ label {
   border: 1px solid #ff2f9f;
 }
 #remove__top__text--continer {
-  padding-bottom: 10px;
+  padding-block: 10px;
 }
 #remove__top__text {
   flex-grow: 0.5;
@@ -489,7 +495,7 @@ label {
   border: 1px solid #ff2f9f;
 }
 #remove__bottom__text--container {
-  padding-bottom: 10px;
+  padding-block: 10px;
 }
 /* input de fuentes */
 .fonts--container {
@@ -514,8 +520,8 @@ label {
 #fonts__style:hover {
   border: 1px solid #ff2f9f;
 }
-#font__size {
-  width: 50%;
+.font__size {
+  width: 100%;
   height: 5vh;
   font-size: 0.9rem;
   padding: 5px 10px;
@@ -527,7 +533,7 @@ label {
 }
 @media (min-width: 970px) {
   #font__size {
-    width: 30%;
+    width: 100%;
     height: 40px;
   }
 }
@@ -536,7 +542,7 @@ label {
   border: 1px solid #ff2f9f;
 }
 /* inputs de alineación de texto */
-#align__text--container {
+.align__text--container {
   display: flex;
   gap: 8px;
   padding-bottom: 10px;
@@ -545,7 +551,7 @@ label {
 .center__text--btn,
 .justify__text--btn,
 .right__text--btn {
-  width: 10%;
+  width: 20%;
   height: 5vh;
   font-size: 0.9rem;
   padding: 5px 10px;

@@ -44,8 +44,7 @@
         <section class="meme__area" id="meme__area">
             <p class="meme__top--text" id="meme__top--text">Ingresar texto superior</p>
             <!-- área en negro: -->
-            <div class="meme__black--area" id="meme__black--area">
-            </div>
+            <div class="meme__black--area" id="meme__black--area"></div>
             <p class="meme__bottom--text" id="meme__bottom--text">Ingresar texto inferior</p>
         </section>
         <!-- botón de descarga: -->
@@ -64,11 +63,14 @@
             <div id="url_and_upload__image--container">
                 <h3 id="url__tittle">URL</h3>
                 <div class="url__upload--container" id="url__upload--container">
-                    <input
-                    id="input__url--container"
-                    type="text" 
-                    placeholder="http://ejemplo.com"
-                    name="url__input">
+                    <label for="input__url--container" class="input__url--container">
+                        <input
+                        id="input__url--container"
+                        class="input__url"
+                        type="text" 
+                        placeholder="http://ejemplo.com"
+                        name="url__input">
+                    </label>
                     <button class="upload__image--container" id="upload__image--container">
                         <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"> Cargar imagen</i>
                     </button>
@@ -227,14 +229,17 @@
         <h2 id="text__tittle">TEXTO</h2>
         <form id="text__form">
             <!-- input de texto inferior -->
-            <div class="top__text--container" id="top__text--container">
+            <!-- <div class="top__text--container" id="top__text--container"> -->
                 <h3 id="top__text__tittle">TEXTO SUPERIOR</h3>
-                <textarea
-                id="top__text--input"
-                name="top__textarea"
-                placeholder="Ingresa texto superior aquí">
-                </textarea>
-            </div>
+                <label for="top__text--input" class="top__text--input">
+                    <input
+                    type="text"
+                    id="top__text--input"
+                    name="top__textarea"
+                    placeholder="Ingresa texto superior aquí">
+                    </input>
+                </label>
+            <!-- </div> -->
             <div id="remove__top__text--continer">
                 <input
                 id="remove__top__text"
@@ -243,20 +248,24 @@
                 <label for="remove__top__text" id="remove__top__text-point">Quitar texto superior</label>
             </div>
             <!-- input de texto inferior -->
-            <div class="bottom__text--container" id="bottom__text--container">
+            <!-- <div class="bottom__text--container" id="bottom__text--container"> -->
                 <h3 id="bottom__text__tittle">TEXTO INFERIOR</h3>
-                <textarea
-                id="bottom__text--input"
-                name="bottom__textarea"
-                placeholder="Ingresa texto inferior aquí">
-                </textarea>
-            </div>
+                <label for="bottom__text--input">
+                    <input
+                    type="text"
+                    id="bottom__text--input"
+                    name="bottom__textarea"
+                    placeholder="Ingresa texto inferior aquí">
+                    </input>
+                </label>
+            <!-- </div> -->
             <div id="remove__bottom__text--container">
-                <input
-                id="remove__bottom__text"
-                type="checkbox"
-                name="remove__bottom__text">
-                <label for="remove__bottom__text" id="remove__bottom__text-point">Quitar texto inferior</label>
+                <label for="remove__bottom__text" id="remove__bottom__text-point">
+                    <input
+                    id="remove__bottom__text"
+                    type="checkbox"
+                    name="remove__bottom__text">
+                Quitar texto inferior</label>
             </div>
             <!-- input de fuentes -->
             <!-- <div class="fonts__style--container" id="fonts__style--container"> -->
@@ -274,12 +283,15 @@
                 </select>
             </div>
             <!-- inputs de alineación de texto -->
-            <div id="align__text--container">
-                <input
-                id="font__size"
-                type="number" 
-                name="font__size--input"
-                placeholder="8">
+            <div id="align__text--container" class="align__text--container">
+                <label for="font__size">
+                    <input
+                    id="font__size"
+                    class="font__size"
+                    type="number" 
+                    name="font__size--input"
+                    placeholder="8">
+                </label>
                 <!-- botones de alieado -->
                 <button class="left__text--btn" id="left__text--btn">
                     <i class="fa-solid fa-align-left" aria-hidden="true"></i>
@@ -298,25 +310,29 @@
             <div class="color_and__bkg--container" id="color_and__bkg--container">
                 <div id="color__text--container">
                     <h3 id="color__tittle">COLOR</h3>
-                    <div class="text__color--container" id="text__color--container">
+                    <!-- <div class="text__color--container" id="text__color--container"> -->
+                    <label for="text__color" class="text__color--container" id="text__color--container">
                         <input
                         id="text__color"
                         type="color" 
                         name="text__color--input"
                         value="#000000">
                         <span class="color__text--span">#00000</span>
-                    </div>
+                    </label>
+                    <!-- </div> -->
                 </div>
                 <div id="bkg__text--container">
                     <h3 id="bkg__tittle">FONDO</h3>
-                    <div class="text__background__color--container" id="text__background__color--container">
+                    <!-- <div class="text__background__color--container" id="text__background__color--container"> -->
+                    <label for="text__background" class="text__background__color--container" id="text__background__color--container">
                         <input 
+                        id="text__background" 
                         type="color" 
                         name="text__background__input" 
-                        id="text__background" 
                         value="#ffffff">
                         <span class="bkg__color--span" id="bkg__color--span">#ffffff</span>
-                    </div>
+                    </label>
+                    <!-- </div> -->
                 </div>
             </div>
             <div id="transparent__bacground--container">
@@ -338,15 +354,17 @@
             <!-- input de espaciado -->
             <div id="spaceline--container">
                 <h3 id="spaceline__tittle">ESPACIADO</h3>
-                <div class="spaceline__container" id="spaceline__container">
-                    <input
-                    id="spaceline" 
-                    type="number" 
-                    name="spaceline__input"
-                    min="10"
-                    max="50"
-                    placeholder="15">
-                </div>
+                <!-- <div class="spaceline__container" id="spaceline__container"> -->
+                    <label for="spaceline">
+                        <input
+                        id="spaceline" 
+                        type="number" 
+                        name="spaceline__input"
+                        min="10"
+                        max="50"
+                        placeholder="15">
+                    </label>
+                <!-- </div> -->
             </div>
             <!-- input de interlineado -->
             <div id="space_letter__container">

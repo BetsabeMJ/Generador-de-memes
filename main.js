@@ -7,6 +7,36 @@ const textButton = document.getElementById('text--button');
 const changeColor = document.getElementById('dark--mode--button');
 
 
+//////////    MODO OSCURO /////////////////
+//console.log(darkMode);
+
+// darkMode.addEventListener("click", () => {
+//   document.classList.add(".dark__mode");
+// });
+
+//MEDIO FUNCIONA EL MODO OSCURO, PERO FALTA QUE LOS ASIDES SE PINTEN DE NEGRO Y EL FONDO DE LOS INPUST
+const bodyColor = document.querySelector(".body");
+const darkMode = document.querySelector('.dark-mode') // esta es la clase de css, no el boton
+const asides = document.querySelectorAll('aside')
+
+
+const cambiarColor = () => {
+  if (bodyColor.classList.contains('body')) {
+    bodyColor.classList.replace('body', 'dark-mode')
+    changeColor.innerText = 'Modo claro'
+  } else {
+    bodyColor.classList.replace('dark-mode', 'body')
+    changeColor.innerText = 'Modo oscuro'
+  }
+}
+
+//let darkIcon = document.querySelector('.fa-solid fa-lightbulb')
+
+changeColor.addEventListener('click', cambiarColor);
+//asides.addEventListener()
+
+
+
 // 2.  ÁREA DE  EDITOR (CAJA DE IMAGEN, TEXTOS Y BOTÓN DE DESCARGA)
 const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
 const memeTopText = document.getElementById('meme__top--text');
@@ -92,38 +122,5 @@ const spaceline = document.getElementById('spaceline');
 
 //input de interlineado
 const spaceLetter = document.getElementById('space__letter');
-
-
-
-
-
-
-//////////    MODO OSCURO /////////////////
-//console.log(darkMode);
-
-// darkMode.addEventListener("click", () => {
-//   document.classList.add(".dark__mode");
-// });
-
-//MEDIO FUNCIONA EL MODO OSCURO, PERO FALTA QUE LOS ASIDES SE PINTEN DE NEGRO Y EL FONDO DE LOS INPUST
-const bodyColor = document.querySelector(".body");
-const darkMode = document.querySelector('.dark-mode') // esta es la clase de css, no el boton
-const asides = document.querySelectorAll('aside')
-
-
-const cambiarColor = () => {
-  if (bodyColor.classList.contains('body')) {
-    bodyColor.classList.replace('body', 'dark-mode')
-    changeColor.innerText = 'Modo claro'
-  } else {
-    bodyColor.classList.replace('dark-mode', 'body')
-    changeColor.innerText = 'Modo oscuro'
-  }
-}
-
-//let darkIcon = document.querySelector('.fa-solid fa-lightbulb')
-
-changeColor.addEventListener('click', cambiarColor);
-//asides.addEventListener()
 
 
