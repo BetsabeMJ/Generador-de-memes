@@ -4,7 +4,10 @@
 const navButtons = document.getElementById('nav__buttons--container'); //barra de botones (los tres)
 const imageButton = document.getElementById('image--button');
 const textButton = document.getElementById('text--button');
-const changeColor = document.getElementById('dark--mode--button');
+const darkButton = document.getElementById('dark--mode--button');
+const darkIcon = document.querySelector('.fa-solid fa-lightbulb')
+// const lightButton = document.getElementById('light--mode--button')
+const lightIcon = document.querySelector('.fa-regular fa-lightbulb')
 
 
 //////////    MODO OSCURO /////////////////
@@ -20,20 +23,23 @@ const darkMode = document.querySelector('.dark-mode') // esta es la clase de css
 const asides = document.querySelectorAll('aside')
 
 
+
+
 const cambiarColor = () => {
   if (bodyColor.classList.contains('body')) {
     bodyColor.classList.replace('body', 'dark-mode')
-    changeColor.innerText = 'Modo claro'
+    darkButton.innerText = 'Modo claro'
   } else {
     bodyColor.classList.replace('dark-mode', 'body')
-    changeColor.innerText = 'Modo oscuro'
+    darkButton.innerText = 'Modo oscuro'
   }
 }
 
-//let darkIcon = document.querySelector('.fa-solid fa-lightbulb')
+darkButton.addEventListener('click', cambiarColor);
 
-changeColor.addEventListener('click', cambiarColor);
-//asides.addEventListener()
+
+
+
 
 
 
