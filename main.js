@@ -138,7 +138,7 @@ inputBlur.addEventListener('input', (event) => {
 
 inputGreys.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `greys(${inputGreys.value}%)`;//este no funciona
+  memeBlackArea.style.filter = `grayscale(${inputGreys.value}%)`;//Ya funciona, vi en youtube que el valor greys no existe, hay que cambiarlo a greyscale
 })
 
 inpusSepia.addEventListener('input', (event) => {
@@ -148,7 +148,7 @@ inpusSepia.addEventListener('input', (event) => {
 
 inputHue.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `hue(${inputHue.value}px)`;//tampoco funciona
+  memeBlackArea.style.filter = `hue-rotate(${inputHue.value}deg)`;//se tiene que poner hue-rotate y usa deg, no usa % ni px
 })
 
 inputSaturate.addEventListener('input', (event) => {
@@ -158,9 +158,8 @@ inputSaturate.addEventListener('input', (event) => {
 
 inputNegative.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `negative(${inputNegative.value}px)`;//tampoco fuunciona
+  memeBlackArea.style.filter = `invert(${inputNegative.value})`;//a este se le pone invert y no tiene valores %, px o deg, se deja solito
 })
-
 
 
 
