@@ -81,7 +81,41 @@ const formImage = document.getElementById('image__form'); //FORM que encierra lo
 const urlAndUploadImageTittle = document.getElementById('url_and_upload__image--container');//CAJA que contiene el input url, la carga de imagen y el título URL, creo que no lo voy a necesitar
 const urlUploadContainer = document.getElementById('url__upload--container'); //CAJITA que encierra los inputs url y cargar imagen
 const urlInput = document.getElementById('input__url--container');
+const imagePreview = document.getElementById('image-preview');
 const uploadImage = document.getElementById('upload__image--container');
+
+// const urlMeme = (event) => {
+//   event.target.value;
+//   const cargarImage = memeBlackArea;
+//   cargarImage.style.backgroundImage = `url("${urlInput.value}")`;
+// }
+// urlInput.addEventListener('change', urlMeme);
+
+
+
+// urlInput.addEventListener('input', (event) => {
+//   event.target.value;
+//   const url = urlInput.value;
+//   imagePreview.src = url;
+// });
+
+//no aparece la imagen hasta que le doy click afuera del input
+urlInput.addEventListener('change', (event)=>{
+  event.target.value;
+  const url = urlInput.value;
+  memeBlackArea.style.backgroundImage = `url("${url}")`;
+  memeBlackArea.style.backgroundPosition = 'center';
+});
+
+
+// urlInput.addEventListener('input', (event) => {
+//   event.target.value;
+//   const url = urlInput.value;
+//   const img = document.createElement('img');
+//   img.src = url;
+//   memeBlackArea.innerHTML = ''; // clear the div
+//   memeBlackArea.appendChild(img);
+// });
 
 
 
@@ -302,6 +336,7 @@ textColor.addEventListener('input',(event) => {
 //   const cambiarSpanText = textColor.value;
   
 // });
+
 
 
 
