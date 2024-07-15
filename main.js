@@ -133,7 +133,7 @@ inputContrast.addEventListener('input', (event) => {
 
 inputBlur.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `blur(${event.target.value}px)`;
+  memeBlackArea.style.filter = `blur(${event.target.value}px)`;//clase 19/06 min 2:12:12
 })
 
 inputGreys.addEventListener('input', (event) => {
@@ -164,7 +164,45 @@ inputNegative.addEventListener('input', (event) => {
 
 
 //boton de restabler
-const restoreButton = document.getElementById('restore--button');
+const restoreButton = document.getElementById('restore--button'); // funciona, pero cuando lo preciono me hace saltar hasta el principio de la página, no se queda en el lugar del botón
+
+restoreButton.addEventListener('click', ()=> {
+    inputBrightness.value = '100';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputOpacity.value = '100';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputContrast.value = '100';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputBlur.value = '0';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputGreys.value = '0';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inpusSepia.value = '0';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputHue.value = '0';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputSaturate.value = '100';
+});
+
+restoreButton.addEventListener('click', ()=> {
+    inputNegative.value = '0';
+});
+
+
 
 
 //4. ASIDE DEL TEXTO
