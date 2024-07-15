@@ -8,6 +8,7 @@ const darkButton = document.getElementById('dark--mode--button');
 const darkIcon = document.querySelector('.fa-solid fa-lightbulb')
 // const lightButton = document.getElementById('light--mode--button')
 const lightIcon = document.querySelector('.fa-regular fa-lightbulb')
+//const hidden = document.querySelector('.hidden');
 
 
 //////////    MODO OSCURO /////////////////
@@ -18,50 +19,81 @@ const lightIcon = document.querySelector('.fa-regular fa-lightbulb')
 // });
 
 //MEDIO FUNCIONA EL MODO OSCURO, PERO FALTA QUE LOS ASIDES SE PINTEN DE NEGRO Y EL FONDO DE LOS INPUST
-const bodyColor = document.querySelector(".body");
-const darkMode = document.querySelector('.dark-mode') // esta es la clase de css, no el boton
-const asides = document.querySelectorAll('aside')
-
-
-
+const body = document.querySelector(".body");
+const darkMode = document.querySelector('.dark-mode'); // esta es la clase de css, no el boton
+const asides = document.querySelectorAll('aside');
 
 const cambiarColor = () => {
-  if (bodyColor.classList.contains('body')) {
-    bodyColor.classList.replace('body', 'dark-mode')
+  if (body.classList.contains('body')) {
+    body.classList.replace('body', 'dark-mode')
     darkButton.innerText = 'Modo claro'
   } else {
-    bodyColor.classList.replace('dark-mode', 'body')
+    body.classList.replace('dark-mode', 'body')
     darkButton.innerText = 'Modo oscuro'
   }
 }
-
 darkButton.addEventListener('click', cambiarColor);
 
+//////////    BOTON DE IMAGEN   /////////////////
+// const showImageAside = () => {
+// if (body.classList.contains('textButton')) {
+//   body.classList.replace('textButton', 'imageButton')
+
+// } else {
+//   textButton  .classList.add('hidden')
+// }
+// }
+// textButton.addEventListener('click', showImageAside);
 
 
 
+//////////    BOTON DE TEXTO   /////////////////
+// const showTextAside = () => {
+// if () {
+
+// } else {
+//   textButton.classList.add('hidden')
+// }
+// }
+// textButton.addEventListener('click', showTextAside);
 
 
 
 // 2.  ÁREA DE  EDITOR (CAJA DE IMAGEN, TEXTOS Y BOTÓN DE DESCARGA)
 const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
 const memeTopText = document.getElementById('meme__top--text');
-const memeBlackArea = document.getElementById('meme__black--area');
+const memeBlackArea = document.getElementById('meme__black--area');//lugar donde va la foto
 const memeBottomText = document.getElementById('meme__bottom--text0');
 const downloadButton = document.getElementById('download--button');
-const downloadIcon = document.querySelector('.fa-solid fa-download');
+const downloadIcon = document.querySelector('.fa-solid .fa-download');
 
 
 //  3. ASIDE CON FILTROS Y CARGO DE IMAGEN
 // icono x de cierre, url, cargar imagen
 const imageAside = document.getElementById('image__aside'); // todo el asede de editar imagen
-const closeIcon = document.querySelector('.fa-regular fa-circle-xmark');
+//console.log(imageAside)
+const closeIcon = document.querySelector('.fa-circle-xmark');
+//console.log(closeIcon)
 const imageTittle = document.getElementById('image__tittle'); //TÍTULO de aside imagen, creo que no lo necestio
 const formImage = document.getElementById('image__form'); //FORM que encierra los inputs en aside imagen
 const urlAndUploadImageTittle = document.getElementById('url_and_upload__image--container');//CAJA que contiene el input url, la carga de imagen y el título URL, creo que no lo voy a necesitar
 const urlUploadContainer = document.getElementById('url__upload--container'); //CAJITA que encierra los inputs url y cargar imagen
 const urlInput = document.getElementById('input__url--container');
 const uploadImage = document.getElementById('upload__image--container');
+
+
+
+// const closeImageAside = () => {
+//   console.log('Click en el icono de cierre');
+//   imageAside.classList.add('hidden');
+// }
+// closeIcon.addEventListener('click', closeImageAside);
+
+
+// imageAside.addEventListener('click', ()=>{
+//     imageAside.style.display ='none';
+// });
+
 
 // Sección de color y estilos en ASIDE
 const colorStyleControler = document.getElementById('color__style__controller'); // CAJA que tiene los input color y desplegalbe con título FONDO
@@ -74,15 +106,63 @@ const selectStyle = document.getElementById('select--style');
 //sección de filtros:
 const filtersContainer = document.getElementById('filters--container');//ABARCA desde título hasta último filtro
 const inputFiltersContainer = document.getElementById('inputs__container');//CAJA que contiene a los inputs de filtro
-const brightness = document.getElementById('input__brightness');
-const opacity = document.getElementById('input__opacity');
-const contrast = document.getElementById('input__contrast');
-const blur = document.getElementById('input__blur');
-const greys = document.getElementById('input__grays');
-const sepia = document.getElementById('input__sepia');
-const hue = document.getElementById('input__hue');
-const saturate = document.getElementById('input__saturate');
-const negative = document.getElementById('input__negative');  
+const inputBrightness = document.getElementById('input__brightness');
+const inputOpacity = document.getElementById('input__opacity');
+const inputContrast = document.getElementById('input__contrast');
+const inputBlur = document.getElementById('input__blur');
+const inputGreys = document.getElementById('input__grays');
+const inpusSepia = document.getElementById('input__sepia');
+const inputHue = document.getElementById('input__hue');
+const inputSaturate = document.getElementById('input__saturate');
+const inputNegative = document.getElementById('input__negative');
+
+inputBrightness.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `brightness(${inputBrightness.value}%)`;//le tuve que agregar el símbolo % porque no me tomaba paso a paso la degradación y los px no funcionaban 
+})
+
+inputOpacity.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `opacity(${inputOpacity.value}%)`;
+})
+
+inputContrast.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `contrast(${inputContrast.value}%)`;
+})
+
+inputBlur.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `blur(${event.target.value}px)`;
+})
+
+inputGreys.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `greys(${inputGreys.value}%)`;//este no funciona
+})
+
+inpusSepia.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `sepia(${inpusSepia.value}%)`;
+})
+
+inputHue.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `hue(${inputHue.value}px)`;//tampoco funciona
+})
+
+inputSaturate.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `saturate(${inputSaturate.value}%)`;
+})
+
+inputNegative.addEventListener('input', (event) => {
+  event.target.value;
+  memeBlackArea.style.filter = `negative(${inputNegative.value}px)`;//tampoco fuunciona
+})
+
+
+
 
 //boton de restabler
 const restoreButton = document.getElementById('restore--button');

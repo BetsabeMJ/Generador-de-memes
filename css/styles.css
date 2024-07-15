@@ -207,11 +207,18 @@ h2 {
     font-size: 2rem;
   }
 }
+  /*.close-icon{
+ position: relative;
+  float: right; 
+  position: relative;
+}*/
 .fa-circle-xmark {
   display: flex;
   justify-content: end;
   font-size: 1.25rem;
   position: relative;
+  right: 5px;
+    top: 5px;
 }
 @media (min-width: 970px) {
   .fa-circle-xmark {
