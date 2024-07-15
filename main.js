@@ -259,12 +259,19 @@ const justifyIcon = document.querySelector('.fa-solid .fa-align-justify');
 const rightText = document.getElementById('right__text--btn');
 const rightIcon = document.querySelector('.fa-solid .fa-align-right');
 
+leftText.addEventListener('click', (event) => {
+  event.target.value;
+  const cambiarTextAling = memeTopText;
+  cambiarTextAling = memeTopText.style.textAlign = 'left';
+  cambiarTextAling = memeBottomText.style.textAlign = 'left';
 
-const cambiarTextAling = () => {
-  memeTopText.style.textAlign = 'left';
-  memeBottomText.style.textAlign = 'left';
-}
-leftText.addEventListener('click', cambiarTextAling)
+})
+
+// const cambiarTextAling = () => {
+//   memeTopText.style.textAlign = 'left';
+//   memeBottomText.style.textAlign = 'left';
+// }
+// leftText.addEventListener('click', cambiarTextAling)
 
 
 
@@ -275,14 +282,28 @@ leftText.addEventListener('click', cambiarTextAling)
 // });
 
 
-
-
-
 //inputs de color y fondo de textos
 const textColor = document.getElementById('text__color');
 const textColorSpan = document.getElementById('color__text--span');//span qe tiene el #00000, pero creo que lo voy a quitar
 const bgColorText = document.getElementById('color');
 const trasparentBgText = document.getElementById('transparent__bacground');
+
+//PAra cambiar el color de los textos del emem  
+textColor.addEventListener('input',(event) => {
+  event.target.value;
+  const cambiarTextColor = textColor.value;
+  memeTopText.style.color = cambiarTextColor;
+  memeBottomText  .style.color = cambiarTextColor;
+});
+
+//Para que cambie también en span
+// textColorSpan.addEventListener('input',(event) => {
+//   event.target.value;
+//   const cambiarSpanText = textColor.value;
+  
+// });
+
+
 
 //inputs para el contorno
 const noneOutline = document.getElementById('none__outline');
