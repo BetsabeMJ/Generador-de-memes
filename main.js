@@ -224,7 +224,7 @@ const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
 
 
-//Top text del meme   ya funcionan los dos
+//Top text del meme   ya funcionan los dos. NO TOCAR
 topTextInput.addEventListener('input', (event) => {
   event.target.value;
   const cambiarTopText = topTextInput.value;

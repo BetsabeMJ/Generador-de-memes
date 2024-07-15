@@ -155,6 +155,11 @@ main {
     height: 650px;
   }
 }
+/* ********************************* CLASE MOMENTÁNEA PARA LA FOTO HARCODEADA *******************
+/*                    QUITAR ESTA CLASE **********************************************************/
+.imagen-hardcore{
+  width: 100%;
+}
 .meme__top--text,
 .meme__bottom--text {
   background-color: white;
