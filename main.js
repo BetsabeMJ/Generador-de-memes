@@ -62,8 +62,10 @@ darkButton.addEventListener('click', cambiarColor);
 // 2.  ÁREA DE  EDITOR (CAJA DE IMAGEN, TEXTOS Y BOTÓN DE DESCARGA)
 const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
 const memeTopText = document.getElementById('meme__top--text');
+//console.log(memeTopText)
 const memeBlackArea = document.getElementById('meme__black--area');//lugar donde va la foto
 const memeBottomText = document.getElementById('meme__bottom--text');
+//console.log(memeBottomText)
 const downloadButton = document.getElementById('download--button');
 const downloadIcon = document.querySelector('.fa-solid .fa-download');
 
@@ -244,7 +246,7 @@ bottomTextInput.addEventListener('input', (event) => {
 //input de fuentes
 const fonts = document.getElementById('fonts__style');
 
-//inputs de alineación de texto
+//inputs de tamaño de texto
 const fontSize = document.getElementById('font__size');
 
 //botones e íconos de alieado
@@ -256,6 +258,25 @@ const justifyText = document.getElementById('justify__text--btn');
 const justifyIcon = document.querySelector('.fa-solid .fa-align-justify');
 const rightText = document.getElementById('right__text--btn');
 const rightIcon = document.querySelector('.fa-solid .fa-align-right');
+
+
+const cambiarTextAling = () => {
+  memeTopText.style.textAlign = 'left';
+  memeBottomText.style.textAlign = 'left';
+}
+leftText.addEventListener('click', cambiarTextAling)
+
+
+
+// rightText.addEventListener('click', () => {
+//   //event.target.value;
+//   cambiarTopText.style.textAlign = 'right';
+//   memeBottomText.style.textAlign= 'right';
+// });
+
+
+
+
 
 //inputs de color y fondo de textos
 const textColor = document.getElementById('text__color');
