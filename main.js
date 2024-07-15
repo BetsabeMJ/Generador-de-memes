@@ -99,8 +99,8 @@ const uploadImage = document.getElementById('upload__image--container');
 //   imagePreview.src = url;
 // });
 
-//no aparece la imagen hasta que le doy click afuera del input
-urlInput.addEventListener('change', (event)=>{
+//el evento se tiene que cambiar a input para que haga el cambio en tiempo real
+urlInput.addEventListener('input', (event)=>{
   event.target.value;
   const url = urlInput.value;
   memeBlackArea.style.backgroundImage = `url("${url}")`;
