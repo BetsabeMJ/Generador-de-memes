@@ -63,7 +63,7 @@ darkButton.addEventListener('click', cambiarColor);
 const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
 const memeTopText = document.getElementById('meme__top--text');
 const memeBlackArea = document.getElementById('meme__black--area');//lugar donde va la foto
-const memeBottomText = document.getElementById('meme__bottom--text0');
+const memeBottomText = document.getElementById('meme__bottom--text');
 const downloadButton = document.getElementById('download--button');
 const downloadIcon = document.querySelector('.fa-solid .fa-download');
 
@@ -102,6 +102,16 @@ const inputBgColorLabel = document.getElementById('input__background__color--con
 const inputBgColor = document.getElementById('background--color');
 const colorSpan = document.getElementById('color--span'); //span que dice #ffffff, se tiene que cambiar para que tome el color que eligen
 const selectStyle = document.getElementById('select--style');
+
+//input de background color del meme
+inputBgColor.addEventListener('input',(event)=> {
+  event.target.value;
+  memeBlackArea.style.backgroundBlendMode = `inputBgColor(${inputBgColor.value})`;// no funciona
+});
+
+
+
+
 
 //sección de filtros:
 const filtersContainer = document.getElementById('filters--container');//ABARCA desde título hasta último filtro
@@ -210,8 +220,26 @@ const textAside = document.getElementById('text__aside'); //todo el aside texto
 const formText = document.getElementById('text__form'); //FORM que ncierra los inputs de txto
 const topTextInput = document.getElementById('top__text--input');
 const removeTopText = document.getElementById('remove__top__text');
-const bottomTextUnput = document.getElementById('bottom__text--input');
+const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
+
+
+//Top text del meme   ya funcionan los dos
+topTextInput.addEventListener('input', (event) => {
+  event.target.value;
+  const cambiarTopText = topTextInput.value;
+  memeTopText.innerHTML = cambiarTopText;
+});
+
+//Bottom text del meme
+bottomTextInput.addEventListener('input', (event) => {
+  event.target.value;
+  const cambiarBottomText = bottomTextInput.value;
+  memeBottomText.innerHTML = cambiarBottomText;
+});
+
+
+
 
 //input de fuentes
 const fonts = document.getElementById('fonts__style');
@@ -221,13 +249,13 @@ const fontSize = document.getElementById('font__size');
 
 //botones e íconos de alieado
 const leftText = document.getElementById('left__text--btn');
-const leftIcon = document.querySelector('.fa-solid fa-align-left');
+const leftIcon = document.querySelector('.fa-solid .fa-align-left');
 const centerText = document.getElementById('center__text--btn');
-const centerIcon = document.querySelector('.fa-solid fa-align-center');
+const centerIcon = document.querySelector('.fa-solid .fa-align-center');
 const justifyText = document.getElementById('justify__text--btn');
-const justifyIcon = document.querySelector('.fa-solid fa-align-justify');
+const justifyIcon = document.querySelector('.fa-solid .fa-align-justify');
 const rightText = document.getElementById('right__text--btn');
-const rightIcon = document.querySelector('.fa-solid fa-align-right');
+const rightIcon = document.querySelector('.fa-solid .fa-align-right');
 
 //inputs de color y fondo de textos
 const textColor = document.getElementById('text__color');
