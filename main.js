@@ -100,7 +100,7 @@ const uploadImage = document.getElementById('upload__image--container');
 // });
 
 //el evento se tiene que cambiar a input para que haga el cambio en tiempo real
-urlInput.addEventListener('input', (event)=>{
+urlInput.addEventListener('input', (event) => {
   event.target.value;
   const url = urlInput.value;
   memeBlackArea.style.backgroundImage = `url("${url}")`;

@@ -5,8 +5,8 @@ En esta ocasión, realizamos un **editor de memes** utilizando las tecnologías 
 
 ## Contenido
 
-[Descripción](#Descripción)
-[Gama de colores y fuentes tipográficas](#gama-de-colores)
+1. [Descripción](#Descripción)
+2. [Gama de colores y fuentes tipográficas](#gama-de-colores)
 <!-- [Muestra del proyecto](#muestra-del-proyecto) --> -->
 
 ## Descripción
@@ -17,7 +17,7 @@ Como se podrá observar, las modificaciones en mi proyecto fueron en la paleta d
 ### Gama de colores y fuentes tipográficas
 
 Para la paleta de colores tomé como referencia la siguiente imagen:
-![Audrea Wah page](./imágenes/paleta-de-colores-editor-de-memes-proyecto.jpeg)
+[Audrea Wah page](./imágenes/paleta-de-colores-editor-de-memes-proyecto.jpeg)
 1. #dff6fe;
 2. #ffdefd;
 3. #ff2f9f;
@@ -26,6 +26,6 @@ Para la paleta de colores tomé como referencia la siguiente imagen:
 6. #000000;
 
 Para la tipografía utilicé:
-**Poppins** para títulos y subtítulos.
-**Montserrat** para los textos en general.
+-**Poppins** para títulos y subtítulos.
+-**Montserrat** para los textos en general.
 
