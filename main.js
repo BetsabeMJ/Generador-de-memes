@@ -83,7 +83,7 @@ downloadButton.addEventListener('click', descargarMeme) // sí funciona, es el c
 const imageAside = document.getElementById('image__aside'); // todo el asede de editar imagen
 //console.log(imageAside)
 const closeIcon = document.querySelector('.fa-circle-xmark');
-//console.log(closeIcon)
+console.log(closeIcon)
 const imageTittle = document.getElementById('image__tittle'); //TÍTULO de aside imagen, creo que no lo necestio
 const formImage = document.getElementById('image__form'); //FORM que encierra los inputs en aside imagen
 const urlAndUploadImageTittle = document.getElementById('url_and_upload__image--container');//CAJA que contiene el input url, la carga de imagen y el título URL, creo que no lo voy a necesitar
@@ -269,6 +269,18 @@ const removeTopText = document.getElementById('remove__top__text');
 const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
 
+//para cerar text aside   nooooo funciona
+const closeTextAside = (event) => {
+  event.target.value;
+  textAside.classList.add('hidden');
+}
+closeIcon.addEventListener('click', closeTextAside);
+
+
+
+
+
+
 //YA FUNCIONAN LOS DOS. NO TOCAR
 //Top text del meme   ya funcionan los dos. NO TOCAR
 topTextInput.addEventListener('input', (event) => {
@@ -303,19 +315,45 @@ const justifyIcon = document.querySelector('.fa-solid .fa-align-justify');
 const rightText = document.getElementById('right__text--btn');
 const rightIcon = document.querySelector('.fa-solid .fa-align-right');
 
-leftText.addEventListener('click', (event) => {
-  event.target.value;
-  const cambiarTextAling = memeTopText;
-  cambiarTextAling = memeTopText.style.textAlign = 'left';
-  cambiarTextAling = memeBottomText.style.textAlign = 'left';
+// leftText.addEventListener('click', (event) => {
+//   event.target.value;
+//   const cambiarTextAling = memeTopText;
+//   cambiarTextAling = memeTopText.style.textAlign = 'left';
+//   cambiarTextAling = memeBottomText.style.textAlign = 'left';
 
-})
+// })
 
 // const cambiarTextAling = () => {
 //   memeTopText.style.textAlign = 'left';
 //   memeBottomText.style.textAlign = 'left';
 // }
 // leftText.addEventListener('click', cambiarTextAling)
+
+//POR FIN SALIÓ AGRAGANDO EL PREVENT PARA QUE NO ME ENVÍE A LA PÁGINA PRINCIPAL
+//NO TOCAR
+leftText.addEventListener('click', (event) => {
+  event.preventDefault();
+  memeTopText.style.textAlign = 'left';
+  memeBottomText.style.textAlign = 'left';
+});
+
+centerText.addEventListener('click', (event) => {
+  event.preventDefault();
+  memeTopText.style.textAlign = 'center';
+  memeBottomText.style.textAlign = 'center';
+});
+
+justifyText.addEventListener('click', (event) => {
+  event.preventDefault();
+  memeTopText.style.textAlign = 'justify';
+  memeBottomText.style.textAlign = 'justify';
+});
+
+rightText.addEventListener('click', (event) => {
+  event.preventDefault();
+  memeTopText.style.textAlign = 'right';
+  memeBottomText.style.textAlign = 'right';
+});
 
 
 
