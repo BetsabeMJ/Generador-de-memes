@@ -69,6 +69,14 @@ const memeBottomText = document.getElementById('meme__bottom--text');
 const downloadButton = document.getElementById('download--button');
 const downloadIcon = document.querySelector('.fa-solid .fa-download');
 
+//YA FUNCIONA. NO TOCAR
+const descargarMeme = () => {
+  domtoimage.toBlob(memeArea).then(function (blob) {
+    saveAs(blob, 'mi-meme.png')
+    })
+}
+downloadButton.addEventListener('click', descargarMeme) // sí funciona, es el código del del repo de Lu
+
 
 //  3. ASIDE CON FILTROS Y CARGO DE IMAGEN
 // icono x de cierre, url, cargar imagen
@@ -99,6 +107,7 @@ const uploadImage = document.getElementById('upload__image--container');
 //   imagePreview.src = url;
 // });
 
+//YA FUNCIONA. NO TOCAR
 //el evento se tiene que cambiar a input para que haga el cambio en tiempo real
 urlInput.addEventListener('input', (event) => {
   event.target.value;
@@ -140,7 +149,7 @@ const colorSpan = document.getElementById('color--span'); //span que dice #fffff
 const selectStyle = document.getElementById('select--style');
 
 //input de background color del meme
-inputBgColor.addEventListener('input',(event)=> {
+inputBgColor.addEventListener('input', (event)=> {
   event.target.value;
   memeBlackArea.style.backgroundBlendMode = `inputBgColor(${inputBgColor.value})`;// no funciona
 });
@@ -162,6 +171,7 @@ const inputHue = document.getElementById('input__hue');
 const inputSaturate = document.getElementById('input__saturate');
 const inputNegative = document.getElementById('input__negative');
 
+//YA FUNCIONAN TODOS. NO TOCAR
 inputBrightness.addEventListener('input', (event) => {
   event.target.value;
   memeBlackArea.style.filter = `brightness(${inputBrightness.value}%)`;//le tuve que agregar el símbolo % porque no me tomaba paso a paso la degradación y los px no funcionaban 
@@ -208,44 +218,44 @@ inputNegative.addEventListener('input', (event) => {
 })
 
 
-
+//YA CASI FUNCIONA. NO TOCAR
 //boton de restabler
 const restoreButton = document.getElementById('restore--button'); // funciona, pero cuando lo preciono me hace saltar hasta el principio de la página, no se queda en el lugar del botón
 
-restoreButton.addEventListener('click', ()=> {
-    inputBrightness.value = '100';
+restoreButton.addEventListener('click', () => {
+  inputBrightness.value = '100';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputOpacity.value = '100';
+restoreButton.addEventListener('click', () => {
+  inputOpacity.value = '100';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputContrast.value = '100';
+restoreButton.addEventListener('click', () => {
+  inputContrast.value = '100';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputBlur.value = '0';
+restoreButton.addEventListener('click', () => {
+  inputBlur.value = '0';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputGreys.value = '0';
+restoreButton.addEventListener('click', () => {
+  inputGreys.value = '0';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inpusSepia.value = '0';
+restoreButton.addEventListener('click', () => {
+  inpusSepia.value = '0';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputHue.value = '0';
+restoreButton.addEventListener('click', () => {
+  inputHue.value = '0';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputSaturate.value = '100';
+restoreButton.addEventListener('click', () => {
+  inputSaturate.value = '100';
 });
 
-restoreButton.addEventListener('click', ()=> {
-    inputNegative.value = '0';
+restoreButton.addEventListener('click', () => {
+  inputNegative.value = '0';
 });
 
 
@@ -259,7 +269,7 @@ const removeTopText = document.getElementById('remove__top__text');
 const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
 
-
+//YA FUNCIONAN LOS DOS. NO TOCAR
 //Top text del meme   ya funcionan los dos. NO TOCAR
 topTextInput.addEventListener('input', (event) => {
   event.target.value;
@@ -322,6 +332,7 @@ const textColorSpan = document.getElementById('color__text--span');//span qe tie
 const bgColorText = document.getElementById('color');
 const trasparentBgText = document.getElementById('transparent__bacground');
 
+//YA CASI FUNCIONA. FALTA MODIFICAR EL SPAN, QUE CAMBIE A LA PAR DEL COLOR
 //PAra cambiar el color de los textos del emem  
 textColor.addEventListener('input',(event) => {
   event.target.value;
