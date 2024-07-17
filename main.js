@@ -376,7 +376,7 @@ textColor.addEventListener('input',(event) => {
   event.target.value;
   const cambiarTextColor = textColor.value;
   memeTopText.style.color = cambiarTextColor;
-  memeBottomText  .style.color = cambiarTextColor;
+  memeBottomText.style.color = cambiarTextColor;
 });
 
 //Para que cambie también en span
@@ -389,10 +389,34 @@ textColor.addEventListener('input',(event) => {
 
 
 
-//inputs para el contorno
+//inputs para el contorno  YA FUNCIONAN. NO TOCAR
 const noneOutline = document.getElementById('none__outline');
 const clearOutline = document.getElementById('clear__outline');
 const darkOutline = document.getElementById('dark__outline');
+
+const withoutLine = (event) => {
+  event.preventDefault();
+  memeTopText.style.textShadow = 'none';
+  memeBottomText.style.textShadow = 'none';
+}
+noneOutline.addEventListener('click', withoutLine);
+
+const softOutline = (event) => {
+  event.preventDefault();
+  memeTopText.style.textShadow = '2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 1px 1px 2px #000000';
+  memeBottomText.style.textShadow = '2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 1px 1px 2px #000000';
+}
+clearOutline.addEventListener('click', softOutline);
+
+const hardOutline = (event) => {
+  event.preventDefault();
+  memeTopText.style.textShadow = '4px 1px 9px rgba(0,0,0,0.87)';
+  // '2px 2px 6px rgba(0,0,0,0.58)';
+  memeBottomText.style.textShadow = '4px 1px 9px rgba(0,0,0,0.87)';
+  //'2px 2px 6px rgba(0,0,0,0.58)';
+}
+darkOutline.addEventListener('click', hardOutline);
+
 
 //input de espaciado
 const spaceline = document.getElementById('spaceline');
