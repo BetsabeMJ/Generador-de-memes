@@ -418,10 +418,20 @@ const hardOutline = (event) => {
 darkOutline.addEventListener('click', hardOutline);
 
 
-//input de espaciado
-const spaceline = document.getElementById('spaceline');
+//input de espaciado   no funviona, lo único que hace es hacer grande el espacio del <p> donde está el texto, no espacia las letras
+//creo que el input está mal, no hace nada cuando le pongo otro número
+const spaceLetter = document.getElementById('space__letter');
+
+const spaceBetweenLetter = (event) => {
+  event.target.value;
+  memeTopText.style.padding = `${spaceLetter.value}3px`;
+  memeTopText.style.padding = `${spaceLetter.value}3px`;
+}
+spaceLetter.addEventListener('input', spaceBetweenLetter)
+
+
 
 //input de interlineado
-const spaceLetter = document.getElementById('space__letter');
+const spaceline = document.getElementById('spaceline');
 
 
