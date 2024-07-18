@@ -302,8 +302,38 @@ bottomTextInput.addEventListener('input', (event) => {
 //input de fuentes
 const fonts = document.getElementById('fonts__style');
 
-//inputs de tamaño de texto
+
+
+
+//inputs de tamaño de texto    YA FUNCIONA. NO TOCAR
 const fontSize = document.getElementById('font__size');
+
+// const tamanioDeLetra = (event) => {
+//   event.target.value;
+//   memeTopText.style.fontSize = `${tamanioDeLetra.value}`
+//   memeBottomText.style.fontSize = `${tamanioDeLetra.value}`
+// }
+
+// fontSize.addEventListener('change', tamanioDeLetra)
+
+const tamanioDeLetra = (event) => {
+  event.target.value;
+  memeTopText.style.fontSize = `${fontSize.value}px`;
+  memeBottomText.style.fontSize = `${fontSize.value}px`;
+}
+fontSize.addEventListener('input', tamanioDeLetra)
+
+
+// fontSize.addEventListener('change',(event) => {
+//   event.target.value;
+//   const tamanioDeLetra = fontSize.value;
+//   memeTopText.style.fontSize = tamanioDeLetra;
+//   memeBottomText.style.fontSize = tamanioDeLetra;
+// });
+
+
+
+
 
 //botones e íconos de alieado
 const leftText = document.getElementById('left__text--btn');
@@ -425,13 +455,19 @@ const spaceLetter = document.getElementById('space__letter');
 const spaceBetweenLetter = (event) => {
   event.target.value;
   memeTopText.style.padding = `${spaceLetter.value}3px`;
-  memeTopText.style.padding = `${spaceLetter.value}3px`;
+  memeBottomText.style.padding = `${spaceLetter.value}3px`;
 }
 spaceLetter.addEventListener('input', spaceBetweenLetter)
 
 
 
-//input de interlineado
+//input de interlineado  no funciona
 const spaceline = document.getElementById('spaceline');
 
+const spaceBetweenLines = (event) => {
+  event.target.value;
+  memeTopText.style.lineHeight = `${spaceBetweenLines.value}3px`;
+  memeTopText.style.lineHeight = `${spaceBetweenLines.value}3px`;
+}
+spaceline.addEventListener('input', spaceBetweenLines);
 
