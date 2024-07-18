@@ -276,9 +276,24 @@ const closeTextAside = (event) => {
 }
 closeIcon.addEventListener('click', closeTextAside);
 
+//para quitar texto de arriba, no funcionaba porque estaba poniento removeTopTex === checked y el checked va junto, separado con un punto
+const quitarTopText = () => {
+  if (removeTopText.checked) {
+    memeTopText.classList.add('hidden');
+  } else {
+    memeTopText.classList.remove('hidden');// aquí se le tiene que poner remove, porque estoy removiendo el hidden que le puse en el of
+  }
+}
+removeTopText.addEventListener('click', quitarTopText);
 
-
-
+const quitarBottomText = () => {
+  if (removeBottomText.checked) {
+    memeBottomText.classList.add('hidden');
+  } else {
+    memeBottomText.classList.remove('hidden');
+  }
+}
+removeBottomText.addEventListener('click', quitarBottomText)
 
 
 //YA FUNCIONAN LOS DOS. NO TOCAR
