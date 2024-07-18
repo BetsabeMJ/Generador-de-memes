@@ -431,7 +431,17 @@ textColor.addEventListener('input',(event) => {
   
 // });
 
+//checkbox para quitar el fondo de texto  Creo que tengo que hacer primero el fondo transparente para tener algo que quitar aquí
+const removeBgTransparent = document.getElementById('transparent__bacground');
 
+const quitarBgTransparent = () => {
+  if (removeBgTransparent.checked) {
+    memeArea.classList.add('hidden');
+  } else {
+    memeArea.classList.remove('hidden');
+  }
+}
+removeBgTransparent.addEventListener('click', quitarBgTransparent);
 
 
 //inputs para el contorno  YA FUNCIONAN. NO TOCAR
