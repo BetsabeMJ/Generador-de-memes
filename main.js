@@ -1,4 +1,3 @@
-//console.log("Hola!");
 // PRIMERO LAS VARIABLES:
 // 1. BARRA DE NAVEGACIÓN (BOTONES: IMAGEN, TEXTO, MODO OSCURO)
 const navButtons = document.getElementById('nav__buttons--container'); //barra de botones (los tres)
