@@ -5,23 +5,23 @@ const navButtons = document.getElementById('nav__buttons--container'); //barra d
 const imageButton = document.getElementById('image--button');
 const textButton = document.getElementById('text--button');
 const darkButton = document.getElementById('dark--mode--button');
-const darkIcon = document.querySelector('.fa-solid fa-lightbulb')
+const darkIcon = document.querySelector('.fa-solid.fa-lightbulb')
 // const lightButton = document.getElementById('light--mode--button')
-const lightIcon = document.querySelector('.fa-regular fa-lightbulb')
+const lightIcon = document.querySelector('.fa-regular.fa-lightbulb')
 //const hidden = document.querySelector('.hidden');
 
+//YA FUNCIONAN LOS DOS BOTONES TEXTO E IMAGEN  NO TOCAR
 //Abrir editor de imagen con Botón imagen-header
 const openImageAside = (event) => {
   event.preventDefault();
-  textAside.style.display = 'none';
-  imageAside.style.display = 'block';
+  textAside.style.visibility = 'hidden';
+  imageAside.style.visibility = 'visible';
 }
 imageButton.addEventListener('click', openImageAside);
-
-
+//Abrir editor de texto con Botón imagen-header
 const openTextAside = () => {
-  imageAside.style.display = 'none';
-  textAside.style.display = 'block';
+  imageAside.style.visibility = 'hidden';
+  textAside.style.visibility = 'visible';
 }
 textButton.addEventListener('click', openTextAside)
 
