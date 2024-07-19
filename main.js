@@ -216,6 +216,7 @@ inputBgColor.addEventListener('input',(event) => {
   colorSpan.innerText = changeBgColorImage;
 });
 
+
 //cambiar el mezclado
 const blendModeImage = (event) => {
   event.target.value;
@@ -224,6 +225,15 @@ const blendModeImage = (event) => {
 selectStyle.addEventListener('change', blendModeImage);
 
 
+
+// restoreButton.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   inputBgColor.value = 'transparent';
+// });
+// restoreButton.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   selectStyle.value = 'ninguno';
+// });
 
 
 
@@ -336,6 +346,18 @@ restoreButton.addEventListener('click', (event) => {
   event.preventDefault();
   inputNegative.value = '0';
 });
+
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  inputBgColor.value = '#ffffff';
+  colorSpan.innerText = changeBgColorImage;
+});
+
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  memeBlackArea = selectStyle.value = 'unset';
+});
+
 
 
 
