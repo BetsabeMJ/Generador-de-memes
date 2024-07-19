@@ -314,8 +314,17 @@ bottomTextInput.addEventListener('input', (event) => {
 
 
 
-//input de fuentes
+//input de fuentes   no funciona, tengo que recargar la pág para elegir otra tipografía
 const fonts = document.getElementById('fonts__style');
+
+const chooseFonts = (event) => {
+  event.target.value;
+  memeTopText.style.fontFamily = chooseFonts.value;
+  memeBottomText.style.fontFamily = chooseFonts.value;
+}
+fonts.addEventListener('input', chooseFonts);
+
+
 
 
 
@@ -412,8 +421,11 @@ rightText.addEventListener('click', (event) => {
 //inputs de color y fondo de textos
 const textColor = document.getElementById('text__color');
 const textColorSpan = document.getElementById('color__text--span');//span qe tiene el #00000, pero creo que lo voy a quitar
-const bgColorText = document.getElementById('color');
-const trasparentBgText = document.getElementById('transparent__bacground');
+console.log(textColorSpan)
+const bgColorText = document.getElementById('text__background');
+const bgColorSpan = document.getElementById('bkg__color--span');
+//console.log(bgColorText)
+//const trasparentBgText = document.getElementById('transparent__bacground');
 
 //YA CASI FUNCIONA. FALTA MODIFICAR EL SPAN, QUE CAMBIE A LA PAR DEL COLOR
 //PAra cambiar el color de los textos del emem  
@@ -422,6 +434,8 @@ textColor.addEventListener('input',(event) => {
   const cambiarTextColor = textColor.value;
   memeTopText.style.color = cambiarTextColor;
   memeBottomText.style.color = cambiarTextColor;
+  textColorSpan.innerText = cambiarTextColor;
+
 });
 
 //Para que cambie también en span
@@ -431,14 +445,32 @@ textColor.addEventListener('input',(event) => {
   
 // });
 
+//para cambiar el bg de donde van los textos en el meme
+bgColorText.addEventListener('input', (event) => {
+  event.target.value;
+  const cambiarBgColor = bgColorText.value;
+  memeTopText.style.backgroundColor = cambiarBgColor;
+  memeBottomText.style.backgroundColor = cambiarBgColor;
+  //const spanColor = bgColorText.value;
+  bgColorSpan.innerText = cambiarBgColor;
+});
+
+
+
+
+
+
 //checkbox para quitar el fondo de texto  Creo que tengo que hacer primero el fondo transparente para tener algo que quitar aquí
 const removeBgTransparent = document.getElementById('transparent__bacground');
 
 const quitarBgTransparent = () => {
   if (removeBgTransparent.checked) {
-    memeArea.classList.add('hidden');
+    memeTopText.style.backgroundColor = 'transparent';
+    memeBottomText.style.backgroundColor = 'transparent';
+    //memeBlackArea.
   } else {
-    memeArea.classList.remove('hidden');
+    memeTopText.classList.remove('hidden');
+    memeBottomText.classList.remove('hidden');
   }
 }
 removeBgTransparent.addEventListener('click', quitarBgTransparent);
