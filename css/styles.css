@@ -443,7 +443,7 @@ label {
 }
 @media (max-width: 970px) {
   #text__aside {
-    display: none;
+    visibility: hidden;
     position: absolute;
     top: 800px;
   }

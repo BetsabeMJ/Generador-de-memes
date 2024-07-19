@@ -11,7 +11,7 @@ const lightIcon = document.querySelector('.fa-regular.fa-lightbulb')
 //const hidden = document.querySelector('.hidden');
 
 //YA FUNCIONAN LOS DOS BOTONES TEXTO E IMAGEN  NO TOCAR
-//Abrir editor de imagen con Botón imagen-header
+//Abrir editor de imagen con Botón imagen-header  EN DESKTOP
 const openImageAside = (event) => {
   event.preventDefault();
   textAside.style.visibility = 'hidden';
@@ -134,11 +134,11 @@ const imagePreview = document.getElementById('image-preview');
 const uploadImage = document.getElementById('upload__image--container');
 
 //función para cerrar el paner de imagen en mobile //////////////////////////////////////////////////////////////////////////
-const closeImageAside = () => {
-  //event.target.value;
-  imageAside.classList.add('hidden');
-}
-closeIcon.addEventListener('click', closeImageAside)
+// const closeImageAside = () => {
+//   //event.target.value;
+//   imageAside.classList.add('hidden');
+// }
+// closeIcon.addEventListener('click', closeImageAside)
 
 // const closeImageAside = () => {
 //   if() {
@@ -378,9 +378,9 @@ const removeBottomText = document.getElementById('remove__bottom__text');
 // }
 // closeIcon.addEventListener('click', closeTextAside);
 
-
+//Se supone que es para que aparzce el aside de texto cuando está en mobile, no funciona
 textButton.addEventListener('click', () => {
-  //imageAside.style.display = 'block';
+  imageAside.style.visibility = 'hidden';
   textAside.style.visibility = 'visible';
 });
 
