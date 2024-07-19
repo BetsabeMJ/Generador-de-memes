@@ -67,6 +67,12 @@ const memeBlackArea = document.getElementById('meme__black--area');//lugar donde
 const memeBottomText = document.getElementById('meme__bottom--text');
 //console.log(memeBottomText)
 const downloadButton = document.getElementById('download--button');
+
+
+
+
+
+//descargar boton, lo copie del machete que nos dijo Lu
 const downloadIcon = document.querySelector('.fa-solid .fa-download');
 
 //YA FUNCIONA. NO TOCAR
@@ -83,7 +89,7 @@ downloadButton.addEventListener('click', descargarMeme) // sí funciona, es el c
 const imageAside = document.getElementById('image__aside'); // todo el asede de editar imagen
 //console.log(imageAside)
 const closeIcon = document.querySelector('.fa-circle-xmark');
-console.log(closeIcon)
+//console.log(closeIcon)
 const imageTittle = document.getElementById('image__tittle'); //TÍTULO de aside imagen, creo que no lo necestio
 const formImage = document.getElementById('image__form'); //FORM que encierra los inputs en aside imagen
 const urlAndUploadImageTittle = document.getElementById('url_and_upload__image--container');//CAJA que contiene el input url, la carga de imagen y el título URL, creo que no lo voy a necesitar
@@ -91,6 +97,13 @@ const urlUploadContainer = document.getElementById('url__upload--container'); //
 const urlInput = document.getElementById('input__url--container');
 const imagePreview = document.getElementById('image-preview');
 const uploadImage = document.getElementById('upload__image--container');
+
+//función para cerrar el paner de imagen //////////////////////////////////////////////////////////////////////////
+const closeImageAside = (event) => {
+  event.target.value;
+  imageAside.classList.add('hidden');
+}
+closeIcon.addEventListener('click', closeImageAside)
 
 // const urlMeme = (event) => {
 //   event.target.value;
@@ -314,15 +327,17 @@ bottomTextInput.addEventListener('input', (event) => {
 
 
 
-//input de fuentes   no funciona, tengo que recargar la pág para elegir otra tipografía
+//input de fuentes YA FUNCCIONA, NO TOCAR
 const fonts = document.getElementById('fonts__style');
 
 const chooseFonts = (event) => {
   event.target.value;
-  memeTopText.style.fontFamily = chooseFonts.value;
-  memeBottomText.style.fontFamily = chooseFonts.value;
+  memeTopText.style.fontFamily = fonts.value;
+  memeBottomText.style.fontFamily = fonts.value;
 }
-fonts.addEventListener('input', chooseFonts);
+fonts.addEventListener('change', chooseFonts);
+
+  
 
 
 
@@ -461,19 +476,51 @@ bgColorText.addEventListener('input', (event) => {
 
 
 //checkbox para quitar el fondo de texto  Creo que tengo que hacer primero el fondo transparente para tener algo que quitar aquí
+//no pude hacer que el memeBlackArea que es el contenedor de la foto abarcara todo el espacio de los textos
 const removeBgTransparent = document.getElementById('transparent__bacground');
 
 const quitarBgTransparent = () => {
   if (removeBgTransparent.checked) {
     memeTopText.style.backgroundColor = 'transparent';
     memeBottomText.style.backgroundColor = 'transparent';
-    //memeBlackArea.
   } else {
-    memeTopText.classList.remove('hidden');
-    memeBottomText.classList.remove('hidden');
+    memeTopText.style.backgroundColor = `${bgColorText.value}`;
+    memeBottomText.style.backgroundColor = `${bgColorText.value}`;
   }
 }
 removeBgTransparent.addEventListener('click', quitarBgTransparent);
+
+
+// removeBgTransparent.addEventListener('change', () => {
+//   if (removeBgTransparent.checked) {
+//     memeTopText.style.backgroundColor = 'transparent';
+//     memeTopText.style.position = 'absolute';
+//     memeTopText.style.top = '0';
+//     memeBottomText.style.backgroundColor = 'transparent';
+//     memeBottomText.style.position = 'absolute';
+//     memeBottomText.style.bottom = '0';
+//   } else {
+//     memeTopText.style.backgroundColor = `${bgColorText.value}`;
+//     memeTopText.style.position = 'static';
+//     memeBottomText.style.backgroundColor = `${bgColorText.value}`;
+//     memeBottomText.style.position = 'static';
+//   }
+// });
+
+
+
+
+
+
+
+// const quitarTopText = () => {
+//   if (removeTopText.checked) {
+//     memeTopText.classList.add('hidden');
+//   } else {
+//     memeTopText.classList.remove('hidden');// aquí se le tiene que poner remove, porque estoy removiendo el hidden que le puse en el of
+//   }
+// }
+// removeTopText.addEventListener('click', quitarTopText);
 
 
 //inputs para el contorno  YA FUNCIONAN. NO TOCAR
@@ -523,8 +570,7 @@ const spaceline = document.getElementById('spaceline');
 
 const spaceBetweenLines = (event) => {
   event.target.value;
-  memeTopText.style.lineHeight = `${spaceBetweenLines.value}3px`;
-  memeTopText.style.lineHeight = `${spaceBetweenLines.value}3px`;
+  memeTopText.style.lineHeight = `${spaceline.value}`;
+  memeBottomText.style.lineHeight = `${spaceline.value}`;
 }
 spaceline.addEventListener('input', spaceBetweenLines);
-

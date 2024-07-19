@@ -148,7 +148,7 @@ main {
 @media (min-width: 970px) {
   .meme__black--area {
     width: 650px;
-    height: 650px;
+    height: 480px;
   }
 }
 /* ********************************* CLASE MOMENTÁNEA PARA LA FOTO HARCODEADA *******************
