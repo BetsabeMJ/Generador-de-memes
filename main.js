@@ -161,11 +161,21 @@ const inputBgColor = document.getElementById('background--color');
 const colorSpan = document.getElementById('color--span'); //span que dice #ffffff, se tiene que cambiar para que tome el color que eligen
 const selectStyle = document.getElementById('select--style');
 
-//input de background color del meme
-inputBgColor.addEventListener('input', (event)=> {
+
+inputBgColor.addEventListener('input',(event) => {
   event.target.value;
-  memeBlackArea.style.backgroundBlendMode = `inputBgColor(${inputBgColor.value})`;// no funciona
+  const changeBgColorImage = inputBgColor.value;
+  memeBlackArea.style.backgroundColor = changeBgColorImage;
+  colorSpan.innerText = changeBgColorImage;
 });
+
+//cambiar el mezclado
+const blendModeImage = (event) => {
+  event.target.value;
+  memeBlackArea.style.backgroundBlendMode = selectStyle.value;
+}
+selectStyle.addEventListener('change', blendModeImage);
+
 
 
 
@@ -184,7 +194,7 @@ const inputHue = document.getElementById('input__hue');
 const inputSaturate = document.getElementById('input__saturate');
 const inputNegative = document.getElementById('input__negative');
 
-//YA FUNCIONAN TODOS. NO TOCAR
+//YA CASI FUNCIONAN TODOS. PERO NO CONSERVA LOS VALORES, MODIFICA UNO POR UNO 
 inputBrightness.addEventListener('input', (event) => {
   event.target.value;
   memeBlackArea.style.filter = `brightness(${inputBrightness.value}%)`;//le tuve que agregar el símbolo % porque no me tomaba paso a paso la degradación y los px no funcionaban 
@@ -231,43 +241,52 @@ inputNegative.addEventListener('input', (event) => {
 })
 
 
-//YA CASI FUNCIONA. NO TOCAR
+//YA FUNCIONA. NO TOCAR
 //boton de restabler
-const restoreButton = document.getElementById('restore--button'); // funciona, pero cuando lo preciono me hace saltar hasta el principio de la página, no se queda en el lugar del botón
+const restoreButton = document.getElementById('restore--button');
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputBrightness.value = '100';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputOpacity.value = '100';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputContrast.value = '100';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputBlur.value = '0';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputGreys.value = '0';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inpusSepia.value = '0';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputHue.value = '0';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputSaturate.value = '100';
 });
 
-restoreButton.addEventListener('click', () => {
+restoreButton.addEventListener('click', (event) => {
+  event.preventDefault();
   inputNegative.value = '0';
 });
 

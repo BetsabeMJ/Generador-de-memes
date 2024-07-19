@@ -144,6 +144,9 @@ main {
   background-color: black;
   height: 40vh;
   width: 90vw;
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
 }
 @media (min-width: 970px) {
   .meme__black--area {
