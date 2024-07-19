@@ -10,6 +10,33 @@ const darkIcon = document.querySelector('.fa-solid fa-lightbulb')
 const lightIcon = document.querySelector('.fa-regular fa-lightbulb')
 //const hidden = document.querySelector('.hidden');
 
+//Abrir editor de imagen con Botón imagen-header
+const openImageAside = (event) => {
+  event.preventDefault();
+  textAside.style.display = 'none';
+  imageAside.style.display = 'block';
+}
+imageButton.addEventListener('click', openImageAside);
+
+
+const openTextAside = () => {
+  imageAside.style.display = 'none';
+  textAside.style.display = 'block';
+}
+textButton.addEventListener('click', openTextAside)
+
+// const openImageAside = (event) => {
+//   event.preventDefault();
+//   if (textAside.style.display = 'block') {
+//     imageAside.style.display = 'block'
+//   } else {
+//     body.classList.replace('dark-mode', 'body')
+//     darkButton.innerText = 'Modo oscuro'
+//   }
+// }
+// imageButton.addEventListener('click', openImageAside);
+
+
 
 //////////    MODO OSCURO /////////////////
 //console.log(darkMode);
@@ -22,6 +49,18 @@ const lightIcon = document.querySelector('.fa-regular fa-lightbulb')
 const body = document.querySelector(".body");
 const darkMode = document.querySelector('.dark-mode'); // esta es la clase de css, no el boton
 const asides = document.querySelectorAll('aside');
+
+//                       AQUI:
+// const cambiarModoOscuro = () => {
+//   document.body.classList.remove('light-theme')
+//   document.body.classList.add('dark-theme')
+// }
+
+// const cambiarModoClaro = () => {
+//   document.body.classList.remove('dark-theme')
+//   document.body.classList.add('light-theme')
+// }
+
 
 const cambiarColor = () => {
   if (body.classList.contains('body')) {
@@ -104,6 +143,8 @@ const closeImageAside = (event) => {
   imageAside.classList.add('hidden');
 }
 closeIcon.addEventListener('click', closeImageAside)
+
+
 
 // const urlMeme = (event) => {
 //   event.target.value;
