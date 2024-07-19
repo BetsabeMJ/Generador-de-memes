@@ -24,42 +24,10 @@ const openTextAside = () => {
 }
 textButton.addEventListener('click', openTextAside)
 
-// const openImageAside = (event) => {
-//   event.preventDefault();
-//   if (textAside.style.display = 'block') {
-//     imageAside.style.display = 'block'
-//   } else {
-//     body.classList.replace('dark-mode', 'body')
-//     darkButton.innerText = 'Modo oscuro'
-//   }
-// }
-// imageButton.addEventListener('click', openImageAside);
-
-
-
-//////////    MODO OSCURO /////////////////
-//console.log(darkMode);
-
-// darkMode.addEventListener("click", () => {
-//   document.classList.add(".dark__mode");
-// });
-
 //MEDIO FUNCIONA EL MODO OSCURO, PERO FALTA QUE LOS ASIDES SE PINTEN DE NEGRO Y EL FONDO DE LOS INPUST
 const body = document.querySelector(".body");
 const darkMode = document.querySelector('.dark-mode'); // esta es la clase de css, no el boton
 const asides = document.querySelectorAll('aside');
-
-//                       AQUI:
-// const cambiarModoOscuro = () => {
-//   document.body.classList.remove('light-theme')
-//   document.body.classList.add('dark-theme')
-// }
-
-// const cambiarModoClaro = () => {
-//   document.body.classList.remove('dark-theme')
-//   document.body.classList.add('light-theme')
-// }
-
 
 const cambiarColor = () => {
   if (body.classList.contains('body')) {
@@ -71,31 +39,6 @@ const cambiarColor = () => {
   }
 }
 darkButton.addEventListener('click', cambiarColor);
-
-//////////    BOTON DE IMAGEN   /////////////////
-// const showImageAside = () => {
-// if (body.classList.contains('textButton')) {
-//   body.classList.replace('textButton', 'imageButton')
-
-// } else {
-//   textButton  .classList.add('hidden')
-// }
-// }
-// textButton.addEventListener('click', showImageAside);
-
-
-
-//////////    BOTON DE TEXTO   /////////////////
-// const showTextAside = () => {
-// if () {
-
-// } else {
-//   textButton.classList.add('hidden')
-// }
-// }
-// textButton.addEventListener('click', showTextAside);
-
-
 
 // 2.  ÁREA DE  EDITOR (CAJA DE IMAGEN, TEXTOS Y BOTÓN DE DESCARGA)
 const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
@@ -132,39 +75,6 @@ const urlInput = document.getElementById('input__url--container');
 const imagePreview = document.getElementById('image-preview');
 const uploadImage = document.getElementById('upload__image--container');
 
-//función para cerrar el paner de imagen en mobile //////////////////////////////////////////////////////////////////////////
-// const closeImageAside = () => {
-//   //event.target.value;
-//   imageAside.classList.add('hidden');
-// }
-// closeIcon.addEventListener('click', closeImageAside)
-
-// const closeImageAside = () => {
-//   if() {
-//     imageAside.style.display = 'none';
-
-//   } else 
-//   {
-
-//   }
-// }
-// closeIcon.addEventListener('click', closeImageAside)
-
-
-// const urlMeme = (event) => {
-//   event.target.value;
-//   const cargarImage = memeBlackArea;
-//   cargarImage.style.backgroundImage = `url("${urlInput.value}")`;
-// }
-// urlInput.addEventListener('change', urlMeme);
-
-
-
-// urlInput.addEventListener('input', (event) => {
-//   event.target.value;
-//   const url = urlInput.value;
-//   imagePreview.src = url;
-// });
 
 //YA FUNCIONA. NO TOCAR
 //el evento se tiene que cambiar a input para que haga el cambio en tiempo real
@@ -175,28 +85,6 @@ urlInput.addEventListener('input', (event) => {
   memeBlackArea.style.backgroundPosition = 'center';
 });
 
-
-// urlInput.addEventListener('input', (event) => {
-//   event.target.value;
-//   const url = urlInput.value;
-//   const img = document.createElement('img');
-//   img.src = url;
-//   memeBlackArea.innerHTML = ''; // clear the div
-//   memeBlackArea.appendChild(img);
-// });
-
-
-
-// const closeImageAside = () => {
-//   console.log('Click en el icono de cierre');
-//   imageAside.classList.add('hidden');
-// }
-// closeIcon.addEventListener('click', closeImageAside);
-
-
-// imageAside.addEventListener('click', ()=>{
-//     imageAside.style.display ='none';
-// });
 
 
 // Sección de color y estilos en ASIDE
@@ -222,19 +110,6 @@ const blendModeImage = (event) => {
   memeBlackArea.style.backgroundBlendMode = selectStyle.value;
 }
 selectStyle.addEventListener('change', blendModeImage);
-
-
-
-// restoreButton.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   inputBgColor.value = 'transparent';
-// });
-// restoreButton.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   selectStyle.value = 'ninguno';
-// });
-
-
 
 
 //sección de filtros:
@@ -357,10 +232,6 @@ restoreButton.addEventListener('click', (event) => {
   memeBlackArea = selectStyle.value = 'unset';
 });
 
-
-
-
-
 //4. ASIDE DEL TEXTO
 const textAside = document.getElementById('text__aside'); //todo el aside texto
 const formText = document.getElementById('text__form'); //FORM que ncierra los inputs de txto
@@ -369,13 +240,7 @@ const removeTopText = document.getElementById('remove__top__text');
 const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
 
-// //para cerar text aside   nooooo funciona
 
-// const closeTextAside = (event) => {
-//   event.target.value;
-//   textAside.classList.add('hidden');
-// }
-// closeIcon.addEventListener('click', closeTextAside);
 
 //Se supone que es para que aparzce el aside de texto cuando está en mobile, no funciona
 textButton.addEventListener('click', () => {
@@ -434,20 +299,8 @@ fonts.addEventListener('change', chooseFonts);
   
 
 
-
-
-
-
 //inputs de tamaño de texto    YA FUNCIONA. NO TOCAR
 const fontSize = document.getElementById('font__size');
-
-// const tamanioDeLetra = (event) => {
-//   event.target.value;
-//   memeTopText.style.fontSize = `${tamanioDeLetra.value}`
-//   memeBottomText.style.fontSize = `${tamanioDeLetra.value}`
-// }
-
-// fontSize.addEventListener('change', tamanioDeLetra)
 
 const tamanioDeLetra = (event) => {
   event.target.value;
@@ -455,16 +308,6 @@ const tamanioDeLetra = (event) => {
   memeBottomText.style.fontSize = `${fontSize.value}px`;
 }
 fontSize.addEventListener('input', tamanioDeLetra)
-
-
-// fontSize.addEventListener('change',(event) => {
-//   event.target.value;
-//   const tamanioDeLetra = fontSize.value;
-//   memeTopText.style.fontSize = tamanioDeLetra;
-//   memeBottomText.style.fontSize = tamanioDeLetra;
-// });
-
-
 
 
 
@@ -478,19 +321,6 @@ const justifyIcon = document.querySelector('.fa-solid .fa-align-justify');
 const rightText = document.getElementById('right__text--btn');
 const rightIcon = document.querySelector('.fa-solid .fa-align-right');
 
-// leftText.addEventListener('click', (event) => {
-//   event.target.value;
-//   const cambiarTextAling = memeTopText;
-//   cambiarTextAling = memeTopText.style.textAlign = 'left';
-//   cambiarTextAling = memeBottomText.style.textAlign = 'left';
-
-// })
-
-// const cambiarTextAling = () => {
-//   memeTopText.style.textAlign = 'left';
-//   memeBottomText.style.textAlign = 'left';
-// }
-// leftText.addEventListener('click', cambiarTextAling)
 
 //POR FIN SALIÓ AGRAGANDO EL PREVENT PARA QUE NO ME ENVÍE A LA PÁGINA PRINCIPAL
 //NO TOCAR
@@ -520,13 +350,6 @@ rightText.addEventListener('click', (event) => {
 
 
 
-// rightText.addEventListener('click', () => {
-//   //event.target.value;
-//   cambiarTopText.style.textAlign = 'right';
-//   memeBottomText.style.textAlign= 'right';
-// });
-
-
 //inputs de color y fondo de textos
 const textColor = document.getElementById('text__color');
 const textColorSpan = document.getElementById('color__text--span');//span qe tiene el #00000, pero creo que lo voy a quitar
@@ -547,12 +370,7 @@ textColor.addEventListener('input',(event) => {
 
 });
 
-//Para que cambie también en span
-// textColorSpan.addEventListener('input',(event) => {
-//   event.target.value;
-//   const cambiarSpanText = textColor.value;
-  
-// });
+
 
 //para cambiar el bg de donde van los textos en el meme
 bgColorText.addEventListener('input', (event) => {
@@ -563,9 +381,6 @@ bgColorText.addEventListener('input', (event) => {
   //const spanColor = bgColorText.value;
   bgColorSpan.innerText = cambiarBgColor;
 });
-
-
-
 
 
 
@@ -585,36 +400,6 @@ const quitarBgTransparent = () => {
 removeBgTransparent.addEventListener('click', quitarBgTransparent);
 
 
-// removeBgTransparent.addEventListener('change', () => {
-//   if (removeBgTransparent.checked) {
-//     memeTopText.style.backgroundColor = 'transparent';
-//     memeTopText.style.position = 'absolute';
-//     memeTopText.style.top = '0';
-//     memeBottomText.style.backgroundColor = 'transparent';
-//     memeBottomText.style.position = 'absolute';
-//     memeBottomText.style.bottom = '0';
-//   } else {
-//     memeTopText.style.backgroundColor = `${bgColorText.value}`;
-//     memeTopText.style.position = 'static';
-//     memeBottomText.style.backgroundColor = `${bgColorText.value}`;
-//     memeBottomText.style.position = 'static';
-//   }
-// });
-
-
-
-
-
-
-
-// const quitarTopText = () => {
-//   if (removeTopText.checked) {
-//     memeTopText.classList.add('hidden');
-//   } else {
-//     memeTopText.classList.remove('hidden');// aquí se le tiene que poner remove, porque estoy removiendo el hidden que le puse en el of
-//   }
-// }
-// removeTopText.addEventListener('click', quitarTopText);
 
 
 //inputs para el contorno  YA FUNCIONAN. NO TOCAR
