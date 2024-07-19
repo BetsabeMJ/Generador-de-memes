@@ -107,10 +107,6 @@ const memeBottomText = document.getElementById('meme__bottom--text');
 //console.log(memeBottomText)
 const downloadButton = document.getElementById('download--button');
 
-
-
-
-
 //descargar boton, lo copie del machete que nos dijo Lu
 const downloadIcon = document.querySelector('.fa-solid .fa-download');
 
@@ -137,13 +133,23 @@ const urlInput = document.getElementById('input__url--container');
 const imagePreview = document.getElementById('image-preview');
 const uploadImage = document.getElementById('upload__image--container');
 
-//función para cerrar el paner de imagen //////////////////////////////////////////////////////////////////////////
-const closeImageAside = (event) => {
-  event.target.value;
+//función para cerrar el paner de imagen en mobile //////////////////////////////////////////////////////////////////////////
+const closeImageAside = () => {
+  //event.target.value;
   imageAside.classList.add('hidden');
 }
 closeIcon.addEventListener('click', closeImageAside)
 
+// const closeImageAside = () => {
+//   if() {
+//     imageAside.style.display = 'none';
+
+//   } else 
+//   {
+
+//   }
+// }
+// closeIcon.addEventListener('click', closeImageAside)
 
 
 // const urlMeme = (event) => {
@@ -342,12 +348,19 @@ const removeTopText = document.getElementById('remove__top__text');
 const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
 
-//para cerar text aside   nooooo funciona
-const closeTextAside = (event) => {
-  event.target.value;
-  textAside.classList.add('hidden');
-}
-closeIcon.addEventListener('click', closeTextAside);
+// //para cerar text aside   nooooo funciona
+
+// const closeTextAside = (event) => {
+//   event.target.value;
+//   textAside.classList.add('hidden');
+// }
+// closeIcon.addEventListener('click', closeTextAside);
+
+
+textButton.addEventListener('click', () => {
+  //imageAside.style.display = 'block';
+  textAside.style.visibility = 'visible';
+});
 
 //para quitar texto de arriba, no funcionaba porque estaba poniento removeTopTex === checked y el checked va junto, separado con un punto
 const quitarTopText = () => {
