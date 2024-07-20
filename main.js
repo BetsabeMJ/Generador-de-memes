@@ -60,7 +60,6 @@ const descargarMeme = () => {
 }
 downloadButton.addEventListener('click', descargarMeme) // sí funciona, es el código del del repo de Lu
 
-
 //  3. ASIDE CON FILTROS Y CARGO DE IMAGEN
 // icono x de cierre, url, cargar imagen
 const imageAside = document.getElementById('image__aside'); // todo el asede de editar imagen

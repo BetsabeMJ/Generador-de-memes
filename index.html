@@ -15,15 +15,15 @@
     <!-- LINK DE CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- LIBRERÍA PARA PONER EN EL HEAD DE HTML Y QUE SE PUEDA DESCARGAR LA IMAGEN: -->
-    <!-- dom to image -->     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <!-- dom to image -->   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <!-- file saver -->     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <title>Generador de memes</title>
 </head>
-<body id="body" class="body">
+<body id="body" class="body" class="dark-mode">
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*   1. BARRA DE NAVEGACIÓN   -*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 1. BARRA DE NAVEGACIÓN -->
     <header id="header">
-        <h1 class="main__tittle" id="main__tittle">Generador de Memes</h1>
+        <h1 class="main__tittle" class="dark-mode" id="main__tittle">Generador de Memes</h1>
         <!-- botones de la nav -->
         <nav class="nav__buttons--container" id="nav__buttons--container">
             <button class="nav--button" id="image--button">
@@ -61,7 +61,7 @@
     </main>
     <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    3. ASIDE CON FILTROS   *-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
    <!-- 3. ASIDE CON FILTROS Y CARGO DE IMAGEN -->
-    <aside id="image__aside">
+    <aside id="image__aside" class="dark-mode">
         <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
         <h2 id="image__tittle">IMAGEN</h2>
         <form id="image__form">
@@ -93,7 +93,6 @@
                         value="#ffffff">
                         <span class="color--span" id="color--span">#ffffff</span>
                     </label>             
-                    <!-- <div class="style__controller--container"> -->
                         <select name="select--style" id="select--style">
                             <option value="unset" id="unset">Ninguno</option>
                             <option value="lighten" id="lighten">Aclarar</option>
@@ -102,7 +101,6 @@
                             <option value="luminosity" id="luminosity">Luminosidad</option>   
                             <option value="multiply" id="multiply">Multiplicar</option>
                         </select>
-                    <!-- </div> -->
                 </div>
             </div>
             <!-- 3.1 SECCIÓN DE FILTROS -->
@@ -229,12 +227,11 @@
     </aside>
 <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*4. ASIDE DEL TEXTO-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-* -->
 <!-- 4. ASIDE DEL TEXTO -->
-    <aside id="text__aside">
+    <aside id="text__aside" class="dark-mode">
         <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
         <h2 id="text__tittle">TEXTO</h2>
         <form id="text__form">
             <!-- input de texto inferior -->
-            <!-- <div class="top__text--container" id="top__text--container"> -->
                 <h3 id="top__text__tittle">TEXTO SUPERIOR</h3>
                 <label for="top__text--input" class="top__text--input">
                     <input
@@ -244,7 +241,6 @@
                     placeholder="Ingresa texto superior aquí">
                     </input>
                 </label>
-            <!-- </div> -->
             <div id="remove__top__text--continer">
                 <input
                 id="remove__top__text"
@@ -253,7 +249,6 @@
                 <label for="remove__top__text" id="remove__top__text-point">Quitar texto superior</label>
             </div>
             <!-- input de texto inferior -->
-            <!-- <div class="bottom__text--container" id="bottom__text--container"> -->
                 <h3 id="bottom__text__tittle">TEXTO INFERIOR</h3>
                 <label for="bottom__text--input">
                     <input
@@ -263,7 +258,6 @@
                     placeholder="Ingresa texto inferior aquí">
                     </input>
                 </label>
-            <!-- </div> -->
             <div id="remove__bottom__text--container">
                 <label for="remove__bottom__text" id="remove__bottom__text-point">
                     <input
@@ -273,7 +267,6 @@
                 Quitar texto inferior</label>
             </div>
             <!-- input de fuentes -->
-            <!-- <div class="fonts__style--container" id="fonts__style--container"> -->
             </div>
             <div class="fonts--container" id="fonts--container">
                 <select name="font__family" id="fonts__style">
@@ -315,7 +308,6 @@
             <div class="color_and__bkg--container" id="color_and__bkg--container">
                 <div id="color__text--container">
                     <h3 id="color__tittle">COLOR</h3>
-                    <!-- <div class="text__color--container" id="text__color--container"> -->
                     <label for="text__color" class="text__color--container" id="text__color--container">
                         <input
                         id="text__color"
@@ -328,7 +320,6 @@
                 </div>
                 <div id="bkg__text--container">
                     <h3 id="bkg__tittle">FONDO</h3>
-                    <!-- <div class="text__background__color--container" id="text__background__color--container"> -->
                     <label for="text__background" class="text__background__color--container" id="text__background__color--container">
                         <input 
                         id="text__background" 
@@ -359,7 +350,6 @@
             <!-- input de espaciado -->
             <div id="space-letter--container">
                 <h3 id="space-letter__tittle">ESPACIADO</h3>
-                <!-- <div class="spaceline__container" id="spaceline__container"> -->
                     <label for="space__letter">
                         <input
                         id="space__letter" 
@@ -388,7 +378,7 @@
     </aside>
 <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-  5   FOOTER     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- -->
 <!-- 5. FOOTER -->
-    <footer id="footer">
+    <footer id="footer" class="footer" class="dark-mode">
         <ul class="footer__container--icons" id="footer__container--icons">
             <li class="list" id="github__icon">
                 <a class="footer__icon" id="footer__github__icon" href="https://github.com/BetsabeMJ">   
