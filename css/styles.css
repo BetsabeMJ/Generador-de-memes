@@ -99,6 +99,11 @@ nav {
   background-color: #ffdefd;
   border: 1px solid #ff2f9f;
 }
+#light--mode--button{
+    visibility: hidden;
+    position: absolute;
+    right: 1000px;
+}
 /* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-    2.  ÁREA DE  EDITOR   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
 /* 2. ÁREA DEL EDITOR DE MEMES */
 main {

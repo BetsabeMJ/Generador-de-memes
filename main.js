@@ -5,7 +5,7 @@ const imageButton = document.getElementById('image--button');
 const textButton = document.getElementById('text--button');
 const darkButton = document.getElementById('dark--mode--button');
 const darkIcon = document.querySelector('.fa-solid.fa-lightbulb')
-// const lightButton = document.getElementById('light--mode--button')
+const lightButton = document.getElementById('light--mode--button')
 const lightIcon = document.querySelector('.fa-regular.fa-lightbulb')
 //const hidden = document.querySelector('.hidden');
 
@@ -28,6 +28,9 @@ textButton.addEventListener('click', openTextAside)
 const body = document.querySelector(".body");
 const darkMode = document.querySelector('.dark-mode'); // esta es la clase de css, no el boton
 const asides = document.querySelectorAll('aside');
+const darkModeElements = document.querySelectorAll('.dark-mode');
+
+//Cambio modo claro/ modo oscuro
 
 const cambiarColor = () => {
   if (body.classList.contains('body')) {
@@ -39,6 +42,10 @@ const cambiarColor = () => {
   }
 }
 darkButton.addEventListener('click', cambiarColor);
+
+
+
+
 
 // 2.  ÁREA DE  EDITOR (CAJA DE IMAGEN, TEXTOS Y BOTÓN DE DESCARGA)
 const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
