@@ -1,15 +1,13 @@
 // PRIMERO LAS VARIABLES:
 // 1. BARRA DE NAVEGACIÓN (BOTONES: IMAGEN, TEXTO, MODO OSCURO)
-const navButtons = document.getElementById('nav__buttons--container'); //barra de botones (los tres)
+const navButtons = document.getElementById('nav__buttons--container');
 const imageButton = document.getElementById('image--button');
 const textButton = document.getElementById('text--button');
 const darkButton = document.getElementById('dark--mode--button');
 const darkIcon = document.querySelector('.fa-solid.fa-lightbulb')
 const lightButton = document.getElementById('light--mode--button')
 const lightIcon = document.querySelector('.fa-regular.fa-lightbulb')
-//const hidden = document.querySelector('.hidden');
 
-//YA FUNCIONAN LOS DOS BOTONES TEXTO E IMAGEN  NO TOCAR
 //Abrir editor de imagen con Botón imagen-header  EN DESKTOP
 const openImageAside = (event) => {
   event.preventDefault();
@@ -25,13 +23,12 @@ const openTextAside = () => {
 textButton.addEventListener('click', openTextAside)
 
 //MEDIO FUNCIONA EL MODO OSCURO, PERO FALTA QUE LOS ASIDES SE PINTEN DE NEGRO Y EL FONDO DE LOS INPUST
+//HICE UN MILLÓN DE FUNCIONES, PERO NO FUNCIONARON
 const body = document.querySelector(".body");
 const darkMode = document.querySelector('.dark-mode'); // esta es la clase de css, no el boton
 const asides = document.querySelectorAll('aside');
 const darkModeElements = document.querySelectorAll('.dark-mode');
-
 //Cambio modo claro/ modo oscuro
-
 const cambiarColor = () => {
   if (body.classList.contains('body')) {
     body.classList.replace('body', 'dark-mode')
@@ -43,47 +40,28 @@ const cambiarColor = () => {
 }
 darkButton.addEventListener('click', cambiarColor);
 
-
-
-
-
 // 2.  ÁREA DE  EDITOR (CAJA DE IMAGEN, TEXTOS Y BOTÓN DE DESCARGA)
-const memeArea = document.getElementById('meme__area'); // es una section y abarca la pantalla negra y los textos
+const memeArea = document.getElementById('meme__area');
 const memeTopText = document.getElementById('meme__top--text');
-//console.log(memeTopText)
 const memeBlackArea = document.getElementById('meme__black--area');//lugar donde va la foto
 const memeBottomText = document.getElementById('meme__bottom--text');
-//console.log(memeBottomText)
 const downloadButton = document.getElementById('download--button');
-
 //descargar boton, lo copie del machete que nos dijo Lu
 const downloadIcon = document.querySelector('.fa-solid .fa-download');
-
-//YA FUNCIONA. NO TOCAR
 const descargarMeme = () => {
   domtoimage.toBlob(memeArea).then(function (blob) {
     saveAs(blob, 'mi-meme.png')
     })
 }
-downloadButton.addEventListener('click', descargarMeme) // sí funciona, es el código del del repo de Lu
+downloadButton.addEventListener('click', descargarMeme)
 
 //  3. ASIDE CON FILTROS Y CARGO DE IMAGEN
-// icono x de cierre, url, cargar imagen
-const imageAside = document.getElementById('image__aside'); // todo el asede de editar imagen
-//console.log(imageAside)
+const imageAside = document.getElementById('image__aside');
 const closeIcon = document.querySelector('.fa-circle-xmark');
-//console.log(closeIcon)
-const imageTittle = document.getElementById('image__tittle'); //TÍTULO de aside imagen, creo que no lo necestio
 const formImage = document.getElementById('image__form'); //FORM que encierra los inputs en aside imagen
-const urlAndUploadImageTittle = document.getElementById('url_and_upload__image--container');//CAJA que contiene el input url, la carga de imagen y el título URL, creo que no lo voy a necesitar
-const urlUploadContainer = document.getElementById('url__upload--container'); //CAJITA que encierra los inputs url y cargar imagen
 const urlInput = document.getElementById('input__url--container');
 const imagePreview = document.getElementById('image-preview');
 const uploadImage = document.getElementById('upload__image--container');
-
-
-//YA FUNCIONA. NO TOCAR
-//el evento se tiene que cambiar a input para que haga el cambio en tiempo real
 urlInput.addEventListener('input', (event) => {
   event.target.value;
   const url = urlInput.value;
@@ -91,16 +69,10 @@ urlInput.addEventListener('input', (event) => {
   memeBlackArea.style.backgroundPosition = 'center';
 });
 
-
-
 // Sección de color y estilos en ASIDE
-const colorStyleControler = document.getElementById('color__style__controller'); // CAJA que tiene los input color y desplegalbe con título FONDO
-const colorControlerContainer = document.getElementById('color__controller--container');//CAJITA que tiene los iputs de color y aclarar, creo lo voy a tener que quitar
-const inputBgColorLabel = document.getElementById('input__background__color--container');//LABEL del imputo fondo, creo que también se quitará
 const inputBgColor = document.getElementById('background--color');
-const colorSpan = document.getElementById('color--span'); //span que dice #ffffff, se tiene que cambiar para que tome el color que eligen
+const colorSpan = document.getElementById('color--span');
 const selectStyle = document.getElementById('select--style');
-
 
 inputBgColor.addEventListener('input',(event) => {
   event.target.value;
@@ -109,7 +81,6 @@ inputBgColor.addEventListener('input',(event) => {
   colorSpan.innerText = changeBgColorImage;
 });
 
-
 //cambiar el mezclado
 const blendModeImage = (event) => {
   event.target.value;
@@ -117,10 +88,7 @@ const blendModeImage = (event) => {
 }
 selectStyle.addEventListener('change', blendModeImage);
 
-
 //sección de filtros:
-const filtersContainer = document.getElementById('filters--container');//ABARCA desde título hasta último filtro
-const inputFiltersContainer = document.getElementById('inputs__container');//CAJA que contiene a los inputs de filtro
 const inputBrightness = document.getElementById('input__brightness');
 const inputOpacity = document.getElementById('input__opacity');
 const inputContrast = document.getElementById('input__contrast');
@@ -134,7 +102,7 @@ const inputNegative = document.getElementById('input__negative');
 //YA CASI FUNCIONAN TODOS. PERO NO CONSERVA LOS VALORES, MODIFICA UNO POR UNO 
 inputBrightness.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `brightness(${inputBrightness.value}%)`;//le tuve que agregar el símbolo % porque no me tomaba paso a paso la degradación y los px no funcionaban 
+  memeBlackArea.style.filter = `brightness(${inputBrightness.value}%)`;
 })
 
 inputOpacity.addEventListener('input', (event) => {
@@ -149,12 +117,12 @@ inputContrast.addEventListener('input', (event) => {
 
 inputBlur.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `blur(${event.target.value}px)`;//clase 19/06 min 2:12:12
+  memeBlackArea.style.filter = `blur(${event.target.value}px)`;
 })
 
 inputGreys.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `grayscale(${inputGreys.value}%)`;//Ya funciona, vi en youtube que el valor greys no existe, hay que cambiarlo a greyscale
+  memeBlackArea.style.filter = `grayscale(${inputGreys.value}%)`;
 })
 
 inpusSepia.addEventListener('input', (event) => {
@@ -164,7 +132,7 @@ inpusSepia.addEventListener('input', (event) => {
 
 inputHue.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `hue-rotate(${inputHue.value}deg)`;//se tiene que poner hue-rotate y usa deg, no usa % ni px
+  memeBlackArea.style.filter = `hue-rotate(${inputHue.value}deg)`;
 })
 
 inputSaturate.addEventListener('input', (event) => {
@@ -174,11 +142,9 @@ inputSaturate.addEventListener('input', (event) => {
 
 inputNegative.addEventListener('input', (event) => {
   event.target.value;
-  memeBlackArea.style.filter = `invert(${inputNegative.value})`;//a este se le pone invert y no tiene valores %, px o deg, se deja solito
+  memeBlackArea.style.filter = `invert(${inputNegative.value})`;
 })
 
-
-//YA FUNCIONA. NO TOCAR
 //boton de restabler
 const restoreButton = document.getElementById('restore--button');
 
@@ -240,26 +206,21 @@ restoreButton.addEventListener('click', (event) => {
 
 //4. ASIDE DEL TEXTO
 const textAside = document.getElementById('text__aside'); //todo el aside texto
-const formText = document.getElementById('text__form'); //FORM que ncierra los inputs de txto
 const topTextInput = document.getElementById('top__text--input');
 const removeTopText = document.getElementById('remove__top__text');
 const bottomTextInput = document.getElementById('bottom__text--input');
 const removeBottomText = document.getElementById('remove__bottom__text');
 
-
-
-//Se supone que es para que aparzce el aside de texto cuando está en mobile, no funciona
 textButton.addEventListener('click', () => {
   imageAside.style.visibility = 'hidden';
   textAside.style.visibility = 'visible';
 });
 
-//para quitar texto de arriba, no funcionaba porque estaba poniento removeTopTex === checked y el checked va junto, separado con un punto
 const quitarTopText = () => {
   if (removeTopText.checked) {
     memeTopText.classList.add('hidden');
   } else {
-    memeTopText.classList.remove('hidden');// aquí se le tiene que poner remove, porque estoy removiendo el hidden que le puse en el of
+    memeTopText.classList.remove('hidden');
   }
 }
 removeTopText.addEventListener('click', quitarTopText);
@@ -273,9 +234,7 @@ const quitarBottomText = () => {
 }
 removeBottomText.addEventListener('click', quitarBottomText)
 
-
-//YA FUNCIONAN LOS DOS. NO TOCAR
-//Top text del meme   ya funcionan los dos. NO TOCAR
+//Top text del meme
 topTextInput.addEventListener('input', (event) => {
   event.target.value;
   const cambiarTopText = topTextInput.value;
@@ -289,10 +248,7 @@ bottomTextInput.addEventListener('input', (event) => {
   memeBottomText.innerHTML = cambiarBottomText;
 });
 
-
-
-
-//input de fuentes YA FUNCCIONA, NO TOCAR
+//input de fuentes
 const fonts = document.getElementById('fonts__style');
 
 const chooseFonts = (event) => {
@@ -302,10 +258,7 @@ const chooseFonts = (event) => {
 }
 fonts.addEventListener('change', chooseFonts);
 
-  
-
-
-//inputs de tamaño de texto    YA FUNCIONA. NO TOCAR
+//inputs de tamaño de texto
 const fontSize = document.getElementById('font__size');
 
 const tamanioDeLetra = (event) => {
@@ -314,8 +267,6 @@ const tamanioDeLetra = (event) => {
   memeBottomText.style.fontSize = `${fontSize.value}px`;
 }
 fontSize.addEventListener('input', tamanioDeLetra)
-
-
 
 //botones e íconos de alieado
 const leftText = document.getElementById('left__text--btn');
@@ -327,9 +278,6 @@ const justifyIcon = document.querySelector('.fa-solid .fa-align-justify');
 const rightText = document.getElementById('right__text--btn');
 const rightIcon = document.querySelector('.fa-solid .fa-align-right');
 
-
-//POR FIN SALIÓ AGRAGANDO EL PREVENT PARA QUE NO ME ENVÍE A LA PÁGINA PRINCIPAL
-//NO TOCAR
 leftText.addEventListener('click', (event) => {
   event.preventDefault();
   memeTopText.style.textAlign = 'left';
@@ -354,19 +302,14 @@ rightText.addEventListener('click', (event) => {
   memeBottomText.style.textAlign = 'right';
 });
 
-
-
 //inputs de color y fondo de textos
 const textColor = document.getElementById('text__color');
-const textColorSpan = document.getElementById('color__text--span');//span qe tiene el #00000, pero creo que lo voy a quitar
+const textColorSpan = document.getElementById('color__text--span');
 console.log(textColorSpan)
 const bgColorText = document.getElementById('text__background');
 const bgColorSpan = document.getElementById('bkg__color--span');
-//console.log(bgColorText)
-//const trasparentBgText = document.getElementById('transparent__bacground');
 
-//YA CASI FUNCIONA. FALTA MODIFICAR EL SPAN, QUE CAMBIE A LA PAR DEL COLOR
-//PAra cambiar el color de los textos del emem  
+//Para cambiar el color de los textos del meme  
 textColor.addEventListener('input',(event) => {
   event.target.value;
   const cambiarTextColor = textColor.value;
@@ -375,8 +318,6 @@ textColor.addEventListener('input',(event) => {
   textColorSpan.innerText = cambiarTextColor;
 
 });
-
-
 
 //para cambiar el bg de donde van los textos en el meme
 bgColorText.addEventListener('input', (event) => {
@@ -388,10 +329,7 @@ bgColorText.addEventListener('input', (event) => {
   bgColorSpan.innerText = cambiarBgColor;
 });
 
-
-
-//checkbox para quitar el fondo de texto  Creo que tengo que hacer primero el fondo transparente para tener algo que quitar aquí
-//no pude hacer que el memeBlackArea que es el contenedor de la foto abarcara todo el espacio de los textos
+//checkbox para quitar el fondo de texto
 const removeBgTransparent = document.getElementById('transparent__bacground');
 
 const quitarBgTransparent = () => {
@@ -405,10 +343,7 @@ const quitarBgTransparent = () => {
 }
 removeBgTransparent.addEventListener('click', quitarBgTransparent);
 
-
-
-
-//inputs para el contorno  YA FUNCIONAN. NO TOCAR
+//inputs para el contorno
 const noneOutline = document.getElementById('none__outline');
 const clearOutline = document.getElementById('clear__outline');
 const darkOutline = document.getElementById('dark__outline');
@@ -430,15 +365,12 @@ clearOutline.addEventListener('click', softOutline);
 const hardOutline = (event) => {
   event.preventDefault();
   memeTopText.style.textShadow = '4px 1px 9px rgba(0,0,0,0.87)';
-  // '2px 2px 6px rgba(0,0,0,0.58)';
   memeBottomText.style.textShadow = '4px 1px 9px rgba(0,0,0,0.87)';
-  //'2px 2px 6px rgba(0,0,0,0.58)';
 }
 darkOutline.addEventListener('click', hardOutline);
 
 
-//input de espaciado   no funviona, lo único que hace es hacer grande el espacio del <p> donde está el texto, no espacia las letras
-//creo que el input está mal, no hace nada cuando le pongo otro número
+//input de espaciado
 const spaceLetter = document.getElementById('space__letter');
 
 const spaceBetweenLetter = (event) => {
@@ -447,8 +379,6 @@ const spaceBetweenLetter = (event) => {
   memeBottomText.style.padding = `${spaceLetter.value}3px`;
 }
 spaceLetter.addEventListener('input', spaceBetweenLetter)
-
-
 
 //input de interlineado  no funciona
 const spaceline = document.getElementById('spaceline');
